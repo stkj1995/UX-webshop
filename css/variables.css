@@ -1,13 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap');
 
-:root {
-    --colourBgMain: #414833;
-    --colourBgComplementary: floralwhite;
-    --colourBgNav: #656D4A;
-    --colourBgCategory: #7F4F24;
+/* css/variables.css */
+:root{
+  /* Palette */
+  --clr-oat: #E8DFD3;
+  --clr-soft-white: #FAF9F7;
+  --clr-cocoa: #3D2F2F;
+  --clr-pink: #FF8BA7;
+  --clr-mint: #B4F0CA;
 
-    --fontTitle: 'Lexend Zetta', sans-serif;
-    --fontMain: Poppins, sans-serif;
+  /* Spacing & sizing */
+  --space-xs: 6px;
+  --space-sm: 10px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --radius: 12px;
 
-    --maxWidth: 1024px;
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --font-display: 'Playfair Display', Georgia, serif;
+
+  /* Breakpoint */
+  --bp-md: 768px;
+  --maxWidth: 1024px;
 }
