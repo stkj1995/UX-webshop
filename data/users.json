@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": "000e",
+      "email": "a@a.com",
+      "password": "pepe"
+    },
+    {
+      "id": "5198",
+      "email": "b@a.com",
+      "password": "pepe"
+    },
+    {
+      "id": "fea8",
+      "email": "c@a.com",
+      "password": "pepe"
+    },
+    {
+      "id": "f2a6",
+      "email": "d@a.com",
+      "password": "pepe"
+    },
+    {
+      "id": "e533",
+      "email": "d@a.com",
+      "password": "pepe"
+    },
+    {
+      "id": "626c",
+      "email": "d@a.com",
+      "password": "pepe"
+    },
+    {
+      "id": "0931",
+      "email": "e@a.com",
+      "password": "pepe"
+    }
+  ]
+}

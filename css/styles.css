@@ -1,0 +1,108 @@
+@import 'variables.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body {
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+    font-family: var(--fontMain);
+
+    > header, > footer {
+        padding: 0.5rem 1rem;
+        text-align: center;
+        color: var(--colourBgComplementary);
+        background-color: var(--colourBgMain);
+    }
+
+    > header {
+        font-family: var(--fontTitle);
+
+        nav {
+            display: inline-block;
+            width: auto;
+            margin-top: 0.5rem;
+            padding: 0.25rem 1rem;
+            border-radius: 1rem;
+            font-family: var(--fontMain);
+            
+            button {
+                background-color: var(--colourBgNav);
+                font-family: var(--fontMain);
+                font-weight: bold;
+                font-size: 1rem;
+            }
+        }
+
+        @media (min-width: 600px) {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+
+            h1 {
+                flex: 1 0 auto;
+            }
+        }
+    }
+
+    nav {
+        background-color: var(--colourBgNav);
+        > ul {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            gap: 1rem;
+
+
+            list-style-type: none;
+
+            > li > a {
+                font-weight: bold;
+                text-decoration: none;
+                color: var(--colourBgComplementary);
+            }
+        }
+    }
+
+    main {
+        padding: 0.5rem 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--colourBgMain);
+    }
+}
+
+button {
+    color: var(--colourBgComplementary);
+    background-color: var(--colourBgMain);
+    border: none;
+    cursor: pointer;
+}
+
+.recipe-attribute {
+    display: inline-block;
+    width: auto;
+
+    padding: 0 1rem;
+    border-radius: 1rem;
+    color: var(--colourBgComplementary);
+    
+    &.recipe-area {
+        background-color: var(--colourBgNav);
+    }
+    &.recipe-category {
+        background-color: var(--colourBgCategory);
+    }
+}
+
+.hidden {
+    display: none;
+}

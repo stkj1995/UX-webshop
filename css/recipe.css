@@ -1,0 +1,48 @@
+@import 'styles.css';
+
+:root {
+    --imgMaxWidth: 320px;
+}
+
+#recipe-info {
+    header, .recipe-attribute, #recipe-instructions {
+        margin-bottom: 1rem;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 1rem;
+    }
+
+    div:has(> .recipe-attribute) {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    #recipe-ingredients {
+        ul {
+            padding-left: 1rem;
+        }
+    }
+
+    @media (min-width: 600px) {
+        display: grid;
+        grid-template-columns: var(--imgMaxWidth) 1fr;
+        grid-template-areas: 
+            "header header"
+            "picture ingredients"
+            "instructions instructions";
+        column-gap: 2rem;
+
+        header { grid-area: header; }
+        div:has(img) { grid-area: picture; }
+        #recipe-ingredients { grid-area: ingredients; }
+        #recipe-instructions { grid-area: instructions; }
+
+        img {
+            max-width: var(--imgMaxWidth);
+        }
+    }
+}

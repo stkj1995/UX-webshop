@@ -1,0 +1,21 @@
+form {
+    div {
+        display: flex;
+        flex-flow: column nowrap;
+
+        margin-bottom: 0.5rem;
+
+        textarea {
+            height: 6rem;
+        }
+
+        button {
+            align-self: start;
+
+            border-radius: 1rem;
+            padding: 0.25rem 2rem;
+            font-family: var(--fontMain);
+            font-size: 1rem;
+        }
+    }
+}

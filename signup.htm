@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup | Food Repo</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/signup.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <h1>Food Repo</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" title="Homepage">Home</a></li>
+            <li><a href="contact.htm" title="Contact us">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <header>
+            <h2>Sign up</h2>
+        </header>
+        <form id="frmSignup">
+            <div>
+                <label for="txtEmail">E-mail</label>
+                <input type="email" id="txtEmail" required>
+            </div>
+            <div>
+                <label for="txtPassword">Password</label>
+                <input type="password" id="txtPassword" required>
+            </div>
+            <div>
+                <label for="txtRepeatPassword">Repeat password</label>
+                <input type="password" id="txtRepeatPassword" required>
+            </div>
+            <div>
+                <button type="submit">Sign up</button>
+            </div>
+        </form>
+        <p>
+            Have a user already? <a href="login.htm">Log in!</a>
+        </p>
+    </main>
+    <footer>
+        <p>&copy; 2025 EK Web Development</p>
+    </footer>
+    <dialog id="mdlInfo">
+        <header>
+            <h1></h1>
+            <button class="close">&times;</button>
+        </header>
+        <p></p>
+    </dialog>
+</body>
+</html>

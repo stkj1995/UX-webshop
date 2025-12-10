@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Food Repo</title>
+    <link rel="stylesheet" href="css/recipes.css">
+    <script src="js/recipes.js" type="module"></script>
+    <script src="js/loginCheck.js" type="module"></script>
+    <script src="js/logout.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <h1>Food Repo</h1>
+        <p id="user"></p>
+        <nav>
+            <ul>
+                <li id="login"><a href="login.htm" title="Log in">Log in</a></li>
+                <li id="logout" class="hidden"><button id="btnLogout">Log out</button></li>
+            </ul>
+        </nav>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" title="Homepage">Home</a></li>
+            <li><a href="contact.htm" title="Contact us">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="recipe-list">
+            <header>
+                <h2>Recipes</h2>
+            </header>
+            <template id="recipe-card">
+                <article>
+                    <a href="" target="_self">
+                        <img src="" alt="">
+                    </a>
+                    <header>
+                        <h3>
+                            <a href="" target="_self"></a>
+                        </h3>
+                    </header>
+                    <p class="recipe-attribute recipe-area"></p>
+                    <p class="recipe-attribute recipe-category"></p>
+                </article>
+            </template>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 EK Web Development</p>
+    </footer>
+</body>
+</html>
