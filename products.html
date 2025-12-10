@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe | Food Repo</title>
-    <link rel="stylesheet" href="css/recipe.css">
-    <script src="js/recipe.js" type="module"></script>
-</head>
-<body>
-    <header>
-        <h1>Food Repo</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html" title="Homepage">Home</a></li>
-            <li><a href="contact.htm" title="Contact us">Contact</a></li>
-        </ul>
-    </nav>
+    <title>Products | UX Webshop</title>
 
-    
-    <!-- <main>
-        <section id="recipe-info">
-            <header>
-                <h2></h2>
-            </header>
-            <div>
-                <img src="" alt="">
-                <div>
-                    <p class="recipe-attribute recipe-area"></p>
-                    <p class="recipe-attribute recipe-category"></p>
-                </div>
+    <link rel="stylesheet" href="css/products.css">
+    <script src="js/products.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1>Products</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <section class="products-section">
+            <h2>All Products</h2>
+
+            <!-- Product list container -->
+            <div id="products-container" class="products-grid">
+                <!-- Products will be injected here by products.js -->
             </div>
-            <p id="recipe-instructions"></p>
-            <section id="recipe-ingredients">
-                <header>
-                    <h3>Ingredients</h3>
-                </header>
-                <ul></ul>
-            </section>
+
         </section>
-    </main> -->
+    </main>
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 EK Web Development</p>
+        <p>&copy; 2025 UX Webshop</p>
     </footer>
+
 </body>
+
 </html>
