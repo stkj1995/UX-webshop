@@ -7,6 +7,8 @@
     <title>Signup | UX Webshop</title>
     <link rel="stylesheet" href="css/login.css">
     <script src="js/signup.js" type="module"></script>
+    <script src="js/nav.js" defer></script>
+
 </head>
 
 <body>
@@ -18,10 +20,12 @@
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="cart.html">Cart</a></li>
-            <li><a href="login.html">Log in</a></li>
-            <li><a href="signup.html">Sign up</a></li>
+            <li id="login"><a href="login.html">Log in</a></li>
+            <li id="signup"><a href="signup.html">Sign up</a></li>
+            <li id="logout" class="hidden"><a href="logout.html">Log out</a></li>
         </ul>
     </nav>
+
     <main>
         <header>
             <h2>Sign up</h2>

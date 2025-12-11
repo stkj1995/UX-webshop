@@ -18,10 +18,12 @@
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="cart.html">Cart</a></li>
-            <li><a href="login.html">Log in</a></li>
-            <li><a href="signup.html">Sign up</a></li>
+            <li id="login"><a href="login.html">Log in</a></li>
+            <li id="signup"><a href="signup.html">Sign up</a></li>
+            <li id="logout" class="hidden"><a href="logout.html">Log out</a></li>
         </ul>
     </nav>
+
     <main>
         <!-- Breadcrumb / wayfinding (produktnavn indsættes dynamisk) -->
         <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
@@ -37,8 +39,9 @@
     </main>
 
     <!-- SCRIPTS -->
-    <script src="js/cart.js"></script>
-    <script src="js/product.js"></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/product.js" defer></script>
+    <script src="js/nav.js" defer></script>
 
 </body>
 
