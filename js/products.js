@@ -9,12 +9,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             const card = document.createElement('div');
             card.classList.add('product-card');
             card.innerHTML = `
-                <img src="${p.image}" alt="${p.title}" class="product-image" />
+                <div class="product-img-wrapper">
+                    <img src="${p.image}" alt="${p.title}" class="product-image" />
+                </div>
                 <h3 class="product-title">${p.title}</h3>
                 <p class="product-price">$${p.price.toFixed(2)}</p>
                 <a href="product.html?id=${p.id}" class="view-product-btn">View Product</a>
                 <button data-id="${p.id}" class="add-to-cart">Add to Cart</button>
             `;
+
             container.appendChild(card);
         });
 
