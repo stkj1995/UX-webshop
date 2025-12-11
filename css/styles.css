@@ -50,8 +50,9 @@ body {
     }
 
     nav {
-        background-color: var(--clr-mint);
         padding: 0.6rem 0;
+        display: grid;
+        grid-template-rows: 1fr;
 
         > ul {
             display: flex;
@@ -68,10 +69,12 @@ body {
 
             > li > a:hover {
                 opacity: 0.75;
+                background-color: var(--clr-pink);
             }
         }
     }
 
+ 
     main {
         padding: var(--space-lg);
     }
@@ -102,6 +105,166 @@ button:hover {
     opacity: 0.8;
 }
 
+/* HERO SECTION --------------------------------------------------- */
+.hero {
+    position: relative;
+    height: 80vh;
+    background: url('../assets/images/hero.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45); /* dark overlay for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--clr-pink);
+    color: white;
+    padding: var(--space-md) var(--space-lg);
+    font-weight: 700;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn-cta:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+/* HEADER --------------------------------------------------------- */
+header {
+    display: grid;
+    grid-template-rows: auto auto; /* top row = logo + auth, bottom row = main-nav */
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background-color: var(--clr-oat);
+}
+
+/* STICKY HEADER -------------------------------------------------- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--clr-oat); /* ensure background covers content behind */
+    transition: background-color 0.3s ease;
+}
+
+/* TOP ROW: LOGO + AUTH ------------------------------------------ */
+.header-user {
+    display: flex;
+    justify-content: space-between; /* logo left, auth right */
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Shop Name */
+.header-user h1 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--clr-cocoa);
+}
+
+/* AUTH NAV ------------------------------------------------------ */
+.auth-nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.auth-nav a,
+.auth-nav button {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--clr-cocoa);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius);
+    transition: 0.2s ease;
+}
+
+.auth-nav a:hover,
+.auth-nav button:hover {
+    background-color: var(--clr-pink);
+    color: white;
+}
+
+/* MAIN NAV ------------------------------------------------------ */
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding-top: 0.5rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--clr-cocoa);
+    padding: 0.3rem 0.6rem;
+    transition: 0.2s ease;
+}
+
+/* .main-nav a:hover {
+    color: var(--clr-pink);
+} */
+
+/* .main-nav a.active {
+    border-bottom: 2px solid var(--clr-pink);
+} */
+
+/* RESPONSIVE ---------------------------------------------------- */
+@media (max-width: 768px) {
+    .header-user {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+}
+
+
+/* FOOTER --------------------------------------------------------- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--clr-oat);
+    font-size: 0.9rem;
+    color: var(--clr-cocoa);
+}
+
 
 /* PRODUCT GRID --------------------------------------------------- */
 .products-grid{
@@ -119,7 +282,6 @@ button:hover {
 .product-card {
     background-color: var(--clr-soft-white);
     border-radius: var(--radius);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
     padding: var(--space-md);
     text-align: center;
     transition: transform .2s ease;
@@ -204,7 +366,6 @@ button:hover {
     max-width: 420px;
     border-radius: var(--radius);
     background-color: var(--clr-soft-white);
-    box-shadow: 0 4px 18px rgba(0,0,0,0.2);
 }
 
 #mdlInfo h1 {

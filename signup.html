@@ -12,40 +12,39 @@
 </head>
 
 <body>
-   <!-- HEADER -->
+    <!-- HEADER -->
     <header>
-        <h1>UX Webshop</h1>
-
         <div class="header-user">
             <p id="user"></p>
-
+            <h1>UX Webshop</h1>
             <nav class="auth-nav">
                 <ul>
                     <li id="signup"><a href="signup.html">Sign up</a></li>
-                </ul>
-            </nav>
-               <nav class="auth-nav">
-                <ul>
                     <li id="login"><a href="login.html">Log in</a></li>
                     <li id="logout" class="hidden"><button id="btnLogout">Log out</button></li>
                 </ul>
             </nav>
         </div>
+
+        <!-- MAIN NAV -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- MAIN NAV -->
-    <nav class="main-nav">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="cart.html">Cart</a></li>
-        </ul>
-    </nav>
+    <!-- MAIN CONTENT -->
     <main>
-        <header>
-            <h2>Sign up</h2>
-        </header>
         <form id="frmSignup">
+            <header>
+                <h2>Sign up</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae explicabo officia repellat
+                    veritatis. Amet adipisci veritatis cupiditate alias libero porro. Eligendi harum magni porro
+                    perferendis ex repudiandae illo saepe ut.</p>
+            </header>
             <label for="txtEmail">Email</label>
             <input id="txtEmail" name="txtEmail" type="email" required>
 

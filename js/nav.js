@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const userEl = document.querySelector('#user');
     const userEmailSpan = document.querySelector('#userEmail');
 
+    const header = document.querySelector('header'); // sticky header
+
+    // Check login status
     if (userEmail) {
         // User is logged in
         loginEl.classList.add('hidden');
@@ -46,4 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (userEmailSpan) userEmailSpan.textContent = '';
         }
     }
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 });
+
