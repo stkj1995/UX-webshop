@@ -23,6 +23,15 @@
         </ul>
     </nav>
     <main>
+        <!-- Breadcrumb / wayfinding (produktnavn indsættes dynamisk) -->
+        <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li id="breadcrumb-current" aria-current="page">Product</li>
+            </ol>
+        </nav>
+
         <!-- Where the single product will be injected -->
         <div id="single-product" class="single-product-container"></div>
     </main>

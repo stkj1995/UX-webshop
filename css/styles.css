@@ -104,11 +104,22 @@ button:hover {
 
 
 /* PRODUCT GRID --------------------------------------------------- */
-.products-grid {
+/* .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: var(--space-lg);
     margin-top: var(--space-lg);
+} */
+.products-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:var(--gap);
+}
+@media(min-width:640px){
+  .products-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media(min-width:1024px){
+  .products-grid{ grid-template-columns: repeat(4, 1fr); }
 }
 
 .product-card {
