@@ -1,0 +1,75 @@
+@import 'styles.css'; /* beholder dine variabler */
+
+/* SIGNUP FORM ------------------------------------------------ */
+#frmSignup {
+  background-color: var(--clr-soft-white);
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: var(--font-sans);
+}
+
+#frmSignup header h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--clr-cocoa);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+#frmSignup header p {
+  font-size: 0.95rem;
+  color: #555;
+  text-align: center;
+}
+
+#frmSignup label {
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  color: var(--clr-cocoa);
+}
+
+#frmSignup input {
+  padding: var(--space-sm);
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#frmSignup button {
+  margin-top: 1rem;
+  background-color: var(--clr-pink);
+  color: white;
+  font-weight: 700;
+  padding: var(--space-md);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#frmSignup button:hover {
+  background-color: var(--clr-cocoa);
+  transform: translateY(-2px);
+}
+
+/* LOGIN LINK BELOW FORM */
+#frmSignup + p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+#frmSignup + p a {
+  color: var(--clr-pink);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#frmSignup + p a:hover {
+  text-decoration: underline;
+}

@@ -16,7 +16,7 @@ document.querySelector('#frmLogin').addEventListener('submit', async (e) => {
       return;
     }
 
-    // ✅ Save email in localStorage
+    // Save email in localStorage
     localStorage.setItem(STORAGE_USER_EMAIL, user.email);
 
     // Redirect to products
