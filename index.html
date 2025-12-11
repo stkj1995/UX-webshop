@@ -18,28 +18,26 @@
 
 <body>
     <!-- HEADER -->
-    <header>
-        <div class="header-user">
-            <p id="user"></p>
-            <h1>UX Webshop</h1>
-            <nav class="auth-nav">
-                <ul>
-                    <li id="signup"><a href="signup.html">Sign up</a></li>
-                    <li id="login"><a href="login.html">Log in</a></li>
-                    <li id="logout" class="hidden"><button id="btnLogout">Log out</button></li>
-                </ul>
-            </nav>
-        </div>
+   <header class="site-header">
+  <div class="header-top">
+    <h1 class="logo">UX Webshop</h1>
+    <nav class="auth-nav">
+      <ul>
+        <li id="signup"><a href="signup.html">Sign up</a></li>
+        <li id="login"><a href="login.html">Log in</a></li>
+        <li id="logout" class="hidden"><button id="btnLogout">Log out</button></li>
+      </ul>
+    </nav>
+  </div>
 
-        <!-- MAIN NAV -->
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
-    </header>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="cart.html">Cart</a></li>
+    </ul>
+  </nav>
+</header>
 
     <!-- MAIN CONTENT -->
     <main>
@@ -59,7 +57,52 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 UX Webshop</p>
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- About / Logo -->
+                <div class="footer-about">
+                    <h3>UX Webshop</h3>
+                    <p>We bring you the best products for everyday needs. Quality & style in every click.</p>
+                </div>
+
+                <!-- Navigation -->
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="login.html">Log in</a></li>
+                        <li><a href="signup.html">Sign up</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="footer-newsletter">
+                    <h4>Subscribe</h4>
+                    <p>Get the latest offers and updates directly in your inbox.</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+
+                <!-- Social Links -->
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📸</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 UX Webshop | All rights reserved</p>
+            </div>
+        </footer>
+
     </footer>
 
 </body>

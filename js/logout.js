@@ -1,12 +1,13 @@
-import { SESSION_STORAGE_USER_EMAIL } from './info.js';
+import { STORAGE_USER_EMAIL } from './info.js';
 
 const logoutBtn = document.querySelector('#btnLogout') || document.querySelector('#logout');
 
-if (logoutBtn) {
-    logoutBtn.addEventListener('click', () => {
-        sessionStorage.removeItem(SESSION_STORAGE_USER_EMAIL);
+if(logoutBtn){
+  logoutBtn.addEventListener('click', () => {
+    // Remove user email only
+    localStorage.removeItem(STORAGE_USER_EMAIL);
 
-        location.href = 'index.html';
-    });
+    // Cart stays in localStorage
+    window.location.href = 'index.html';
+  });
 }
-
