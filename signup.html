@@ -27,21 +27,16 @@
             <h2>Sign up</h2>
         </header>
         <form id="frmSignup">
-            <div>
-                <label for="txtEmail">E-mail</label>
-                <input type="email" id="txtEmail" required>
-            </div>
-            <div>
-                <label for="txtPassword">Password</label>
-                <input type="password" id="txtPassword" required>
-            </div>
-            <div>
-                <label for="txtRepeatPassword">Repeat password</label>
-                <input type="password" id="txtRepeatPassword" required>
-            </div>
-            <div>
-                <button type="submit">Sign up</button>
-            </div>
+            <label for="txtEmail">Email</label>
+            <input id="txtEmail" name="txtEmail" type="email" required>
+
+            <label for="txtPassword">Password</label>
+            <input id="txtPassword" name="txtPassword" type="password" required>
+
+            <label for="txtRepeatPassword">Repeat password</label>
+            <input id="txtRepeatPassword" name="txtRepeatPassword" type="password" required>
+
+            <button type="submit">Sign up</button>
         </form>
         <p>
             Have a user already? <a href="login.htm">Log in!</a>
