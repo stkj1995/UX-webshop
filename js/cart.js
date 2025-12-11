@@ -39,47 +39,57 @@
 //     });
 // }
 
-// renderCart();
-
-// js/cart.js
 const cartContainer = document.getElementById('cart-container');
-const totalEl = document.getElementById('total-price');
 
-function renderCart(){
+function renderCart() {
+  if (!cartContainer) return; // Safe check
+
   const email = localStorage.getItem('userEmail');
-  if(!email){
+  if (!email) {
     cartContainer.innerHTML = '<p>Please log in to see your cart.</p>';
-    totalEl.textContent = '0.00';
     return;
   }
+
   const allCarts = JSON.parse(localStorage.getItem('userCarts') || '{}');
   const cart = allCarts[email] || [];
-  cartContainer.innerHTML = '';
 
-  let total = 0;
-  cart.forEach((p, idx) => {
-    const div = document.createElement('div');
-    div.className = 'cart-item';
-    div.innerHTML = `
-      <span class="title">${p.title}</span>
-      <span class="price">$${p.price.toFixed(2)}</span>
-      <button class="remove" data-idx="${idx}">Remove</button>
-    `;
-    cartContainer.appendChild(div);
-    total += Number(p.price);
-  });
+  if (cart.length === 0) {
+    cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+    return;
+  }
 
-  totalEl.textContent = total.toFixed(2);
+  cartContainer.innerHTML = cart
+    .map(
+      (item, index) => `
+    <div class="cart-item">
+      <img src="${item.image}" alt="${item.title}">
+      <h4>${item.title}</h4>
+      <p class="price">$${item.price.toFixed(2)}</p>
+      <button data-index="${index}" class="remove-btn">Remove</button>
+    </div>
+  `
+    )
+    .join('');
 
-  cartContainer.querySelectorAll('.remove').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const idx = Number(e.target.dataset.idx);
-      cart.splice(idx,1);
-      allCarts[email] = cart;
-      localStorage.setItem('userCarts', JSON.stringify(allCarts));
-      renderCart();
+  // Add event listeners for remove buttons
+  document.querySelectorAll('.remove-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      const idx = e.target.dataset.index;
+      removeFromCart(idx);
     });
   });
 }
 
+function removeFromCart(index) {
+  const email = localStorage.getItem('userEmail');
+  const allCarts = JSON.parse(localStorage.getItem('userCarts') || '{}');
+  const cart = allCarts[email] || [];
+
+  cart.splice(index, 1);
+  allCarts[email] = cart;
+  localStorage.setItem('userCarts', JSON.stringify(allCarts));
+  renderCart();
+}
+
+// Initialize cart render
 renderCart();

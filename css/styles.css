@@ -104,12 +104,6 @@ button:hover {
 
 
 /* PRODUCT GRID --------------------------------------------------- */
-/* .products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: var(--space-lg);
-    margin-top: var(--space-lg);
-} */
 .products-grid{
   display:grid;
   grid-template-columns: 1fr;
@@ -155,7 +149,6 @@ button:hover {
     margin: 0.3rem 0 var(--space-sm);
 }
 
-
 /* PRODUCT DETAILS ------------------------------------------------ */
 .product-details {
     display: grid;
@@ -178,7 +171,6 @@ button:hover {
 .product-details p {
     margin-bottom: var(--space-md);
 }
-
 
 /* CART PAGE ------------------------------------------------------ */
 .cart-item {
@@ -204,7 +196,6 @@ button:hover {
     background-color: var(--clr-cocoa);
 }
 
-
 /* MODAL ---------------------------------------------------------- */
 #mdlInfo {
     border: none;
@@ -229,7 +220,6 @@ button:hover {
 #mdlInfo button {
     width: 100%;
 }
-
 
 /* HIDDEN CLASS --------------------------------------------------- */
 .hidden {
