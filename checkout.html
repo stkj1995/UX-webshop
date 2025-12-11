@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Food Repo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/checkout.js" type="module" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Food Repo</h1>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="login.html">Log in</a></li>
+            <li><a href="signup.html">Sign up</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Checkout</h2>
+
+        <section aria-labelledby="delivery-title">
+            <h3 id="delivery-title">Delivery Address</h3>
+            <form id="frmCheckout">
+
+                <div>
+                    <label for="txtDelivery">Address</label>
+                    <input type="text" id="txtDelivery" required autocomplete="address-line1">
+                </div>
+
+                <h3>Billing Address</h3>
+                <div>
+                    <label for="txtBilling">Address</label>
+                    <input type="text" id="txtBilling" required autocomplete="address-line1">
+                </div>
+
+                <h3>Payment</h3>
+                <div>
+                    <label for="txtCard">Credit Card Number</label>
+                    <input type="text" id="txtCard" required minlength="16" maxlength="19" inputmode="numeric"
+                        autocomplete="cc-number">
+                </div>
+
+                <button type="submit">Confirm Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 EK Web Development</p>
+    </footer>
+
+    <dialog id="mdlInfo">
+        <header>
+            <h1></h1>
+            <button class="close" aria-label="Close">&times;</button>
+        </header>
+        <p></p>
+    </dialog>
+</body>
+
+</html>

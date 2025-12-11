@@ -1,31 +1,31 @@
-import { USERS_BASE_URL } from './info.js';
+import { USERS_BASE_URL, SESSION_STORAGE_USER_EMAIL } from './info.js';
 import { showModal } from './modal.js';
-import { SESSION_STORAGE_USER_EMAIL } from './info.js';
 
-document.querySelector('#frmLogin').addEventListener('submit', (e) => {
+document.querySelector('#frmLogin').addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    fetch(`${USERS_BASE_URL}/users`)
-    .then(response => response.json())
-    .then(data => {
-        const email = e.target.txtEmail.value.trim();
-        const password = e.target.txtPassword.value.trim();
+    const email = e.target.txtEmail.value.trim();
+    const password = e.target.txtPassword.value.trim();
 
-        let found = false;
-        data.forEach(user => {
-            if (!found) {
-                if (user.email === email && user.password === password) {
-                    sessionStorage.setItem(SESSION_STORAGE_USER_EMAIL, email);
-                    location.href = 'index.html';
-                    
-                    found = true;
-                }
-            }
-        });
+    try {
+        const res = await fetch(`${USERS_BASE_URL}/users`);
+        const users = await res.json();
 
-        if (!found) {
+        const user = users.find(u => u.email === email && u.password === password);
+
+        if (!user) {
             showModal('Validation error', 'Incorrect credentials.');
+            return;
         }
-    })
-    .catch(error => console.log(error));
+
+        // Store logged in user
+        sessionStorage.setItem(SESSION_STORAGE_USER_EMAIL, user.email);
+
+        // Redirect
+        location.href = 'index.html';
+
+    } catch (error) {
+        console.error(error);
+        showModal('Error', 'Could not connect to server.');
+    }
 });

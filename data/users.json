@@ -1,39 +1,79 @@
 {
   "users": [
     {
-      "id": "000e",
-      "email": "a@a.com",
-      "password": "pepe"
+      "id": "1733824001001",
+      "email": "sophie@test.com",
+      "password": "Sophie123!"
     },
     {
-      "id": "5198",
-      "email": "b@a.com",
-      "password": "pepe"
+      "id": "1733824001002",
+      "email": "bertram.mom@example.com",
+      "password": "MomPower1!"
     },
     {
-      "id": "fea8",
-      "email": "c@a.com",
-      "password": "pepe"
+      "id": "1733824001003",
+      "email": "cooluser01@mail.com",
+      "password": "CoolUser01!"
     },
     {
-      "id": "f2a6",
-      "email": "d@a.com",
-      "password": "pepe"
+      "id": "1733824001004",
+      "email": "raplover@beats.com",
+      "password": "RapBeat99!"
     },
     {
-      "id": "e533",
-      "email": "d@a.com",
-      "password": "pepe"
+      "id": "1733824001005",
+      "email": "designqueen@studio.com",
+      "password": "DesignQ9!"
     },
     {
-      "id": "626c",
-      "email": "d@a.com",
-      "password": "pepe"
+      "id": "1733824001006",
+      "email": "frontend@devmail.com",
+      "password": "FrontEnd*1"
     },
     {
-      "id": "0931",
-      "email": "e@a.com",
-      "password": "pepe"
+      "id": "1733824001007",
+      "email": "astrolover@space.io",
+      "password": "AstroRock1!"
+    },
+    {
+      "id": "1733824001008",
+      "email": "uxstudent@school.dk",
+      "password": "UxStudy88!"
+    },
+    {
+      "id": "1733824001009",
+      "email": "shoppergirl@web.com",
+      "password": "Shopper44!"
+    },
+    {
+      "id": "1733824001010",
+      "email": "testuser99@example.com",
+      "password": "TestUser#1"
+    },
+    {
+      "id": "1733824001011",
+      "email": "alpha@example.com",
+      "password": "AlphaUser1!"
+    },
+    {
+      "id": "1733824001012",
+      "email": "beta@example.com",
+      "password": "BetaUser2!"
+    },
+    {
+      "id": "1733824001013",
+      "email": "gamma@example.com",
+      "password": "GammaUser3!"
+    },
+    {
+      "id": "1733824001014",
+      "email": "delta@example.com",
+      "password": "DeltaUser4!"
+    },
+    {
+      "id": "1733824001015",
+      "email": "omega@example.com",
+      "password": "OmegaUser5!"
     }
   ]
 }
