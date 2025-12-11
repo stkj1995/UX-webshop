@@ -37,5 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
       header.classList.remove('scrolled');
     }
   });
+  
+  const burger = document.getElementById('burger-btn');
+  const nav = document.getElementById('main-nav');
+
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+
+  });
 });
 

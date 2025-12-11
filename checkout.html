@@ -7,7 +7,7 @@
     <title>Checkout | UX Webshop</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/checkout.js" type="module" defer></script>
-    <script src="js/nav.js" defer></script>
+    <script src="js/nav.js" type="module"></script>
 </head>
 
 <body>
@@ -31,6 +31,12 @@
     <header class="site-header">
         <div class="header-top">
             <h1 class="logo">UX Webshop</h1>
+
+            <!-- Burger menu for mobile -->
+            <button class="burger" id="burger-btn" aria-label="Toggle menu">
+                ☰
+            </button>
+
             <nav class="auth-nav">
                 <ul>
                     <li id="signup"><a href="signup.html">Sign up</a></li>
@@ -40,7 +46,7 @@
             </nav>
         </div>
 
-        <nav class="main-nav">
+        <nav class="main-nav" id="main-nav">
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="products.html">Products</a></li>

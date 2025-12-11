@@ -13,12 +13,10 @@
     <!-- Auth scripts -->
     <script src="js/loginCheck.js" type="module"></script>
     <script src="js/logout.js" type="module"></script>
+    <script src="js/nav.js" type="module"></script>
 
     <!-- Cart script -->
     <script src="js/cart.js" defer></script>
-
-    <!-- JS -->
-    <script src="js/nav.js" defer></script>
 </head>
 
 <body>
@@ -42,6 +40,12 @@
     <header class="site-header">
         <div class="header-top">
             <h1 class="logo">UX Webshop</h1>
+
+            <!-- Burger menu for mobile -->
+            <button class="burger" id="burger-btn" aria-label="Toggle menu">
+                ☰
+            </button>
+
             <nav class="auth-nav">
                 <ul>
                     <li id="signup"><a href="signup.html">Sign up</a></li>
@@ -51,7 +55,7 @@
             </nav>
         </div>
 
-        <nav class="main-nav">
+        <nav class="main-nav" id="main-nav">
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="products.html">Products</a></li>
