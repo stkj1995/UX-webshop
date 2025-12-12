@@ -17,103 +17,107 @@
     <script src="js/product.js" type="module"></script>
 </head>
 
-<body></body>
-<!-- FLOATING CART -->
-<div id="floating-cart" class="floating-cart">
-    <button id="cart-toggle" class="cart-btn">
-        🛒 <span id="cart-count">0</span>
-    </button>
-
-    <div id="cart-dropdown" class="cart-dropdown hidden">
-        <h4>Your Cart</h4>
-        <div id="cart-items" class="cart-items"></div>
-        <div class="cart-footer">
-            <p>Total: $<span id="cart-total">0.00</span></p>
-            <a href="cart.html" class="btn btn-primary btn-block">View Cart</a>
-        </div>
-    </div>
-</div>
-
-<!-- HEADER -->
-<header class="site-header">
-    <div class="header-top">
-        <h1 class="logo">UX Webshop</h1>
-
-        <!-- Burger menu for mobile -->
-        <button class="burger" id="burger-btn" aria-label="Toggle menu">
-            ☰
+<body>
+    <!-- FLOATING CART -->
+    <div id="floating-cart" class="floating-cart">
+        <button id="cart-toggle" class="cart-btn">
+            🛒 <span id="cart-count">0</span>
         </button>
 
-        <nav class="auth-nav">
-            <ul>
-                <li id="user" class="hidden"></li>
-                <li id="signup"><a href="signup.html">Sign up</a></li>
-                <li id="login"><a href="login.html">Log in</a></li>
-                <li id="logout" class="hidden"><button id="btnLogout">Log out</button></li>
-            </ul>
-        </nav>
-    </div>
-
-    <nav class="main-nav" id="main-nav">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="cart.html">Cart</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main class="logout-wrapper">
-    <h1>You are being logged out…</h1>
-    <p>Please wait a moment.</p>
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="footer-container">
-        <!-- About / Logo -->
-        <div class="footer-about">
-            <h3>UX Webshop</h3>
-            <p>We bring you the best products for everyday needs. Quality & style in every click.</p>
-        </div>
-
-        <!-- Navigation -->
-        <div class="footer-nav">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="login.html">Log in</a></li>
-                <li><a href="signup.html">Sign up</a></li>
-            </ul>
-        </div>
-
-        <!-- Newsletter -->
-        <div class="footer-newsletter">
-            <h4>Subscribe</h4>
-            <p>Get the latest offers and updates directly in your inbox.</p>
-            <form id="newsletter-form">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit" class="btn btn-primary">Subscribe</button>
-            </form>
-        </div>
-
-        <!-- Social Links -->
-        <div class="footer-social">
-            <h4>Follow Us</h4>
-            <div class="social-icons">
-                <a href="#" aria-label="Facebook">📘</a>
-                <a href="#" aria-label="Instagram">📸</a>
-                <a href="#" aria-label="Twitter">🐦</a>
+        <div id="cart-dropdown" class="cart-dropdown hidden">
+            <h4>Your Cart</h4>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-footer">
+                <p>Total: $<span id="cart-total">0.00</span></p>
+                <a href="cart.html" class="btn btn-primary btn-block">View Cart</a>
             </div>
         </div>
     </div>
 
-    <div class="footer-bottom">
-        <p>&copy; 2025 UX Webshop | All rights reserved</p>
-    </div>
-</footer>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-top">
+            <h1 class="logo">UX Webshop</h1>
+
+            <!-- Burger menu for mobile -->
+            <button class="burger" id="burger-btn" aria-label="Toggle menu">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+
+            <!-- Auth links -->
+            <nav class="auth-nav">
+                <ul>
+                    <li id="user" class="hidden"><span id="userEmail"></span></li>
+                    <li id="signup"><a href="signup.html">Sign up</a></li>
+                    <li id="login"><a href="login.html">Log in</a></li>
+                    <li id="logout" class="hidden"><button id="btnLogout">Log out</button></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main navigation -->
+        <nav class="main-nav" id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="logout-wrapper">
+        <h1>You are being logged out…</h1>
+        <p>Please wait a moment.</p>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- About / Logo -->
+            <div class="footer-about">
+                <h3>UX Webshop</h3>
+                <p>We bring you the best products for everyday needs. Quality & style in every click.</p>
+            </div>
+
+            <!-- Navigation -->
+            <div class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="login.html">Log in</a></li>
+                    <li><a href="signup.html">Sign up</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <h4>Subscribe</h4>
+                <p>Get the latest offers and updates directly in your inbox.</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+
+            <!-- Social Links -->
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Instagram">📸</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 UX Webshop | All rights reserved</p>
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -42,12 +42,15 @@
 
             <!-- Burger menu for mobile -->
             <button class="burger" id="burger-btn" aria-label="Toggle menu">
-                ☰
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
             </button>
 
+            <!-- Auth links -->
             <nav class="auth-nav">
                 <ul>
-                    <li id="user" class="hidden"></li>
+                    <li id="user" class="hidden"><span id="userEmail"></span></li>
                     <li id="signup"><a href="signup.html">Sign up</a></li>
                     <li id="login"><a href="login.html">Log in</a></li>
                     <li id="logout" class="hidden"><button id="btnLogout">Log out</button></li>
@@ -55,27 +58,35 @@
             </nav>
         </div>
 
+        <!-- Main navigation -->
         <nav class="main-nav" id="main-nav">
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="cart.html">Cart</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main>
-        <!-- Breadcrumb / wayfinding (produktnavn indsættes dynamisk) -->
-        <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
-            <ol>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li id="breadcrumb-current" aria-current="page">Product</li>
-            </ol>
-        </nav>
+        <section class="products-section">
+            <header>
+                <h2>All Products</h2>
+            </header>
 
-        <!-- Where the single product will be injected -->
-        <div id="single-product" class="single-product-container"></div>
+            <!-- Breadcrumb / wayfinding -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="index.html">Home ></a></li>
+                     <li><a href="products.html">Products ></a></li>
+                    <li aria-current="page">Product Details</li>
+                </ol>
+            </nav>
+
+            <!-- Where the single product will be injected -->
+            <div id="single-product" class="single-product-container"></div>
+        </section>
     </main>
 
     <!-- SCRIPTS -->
