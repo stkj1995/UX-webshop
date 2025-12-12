@@ -5,9 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout | UX Webshop</title>
+
     <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/logout.js" type="module"></script>
+    <script src="js/loginCheck.js" type="module"></script>
+    <script src="js/info.js" type="module"></script>
     <script src="js/checkout.js" type="module" defer></script>
     <script src="js/nav.js" type="module"></script>
+    <script src="js/cart.js" type="module"></script>
+    <script src="js/checkout.js" type="module"></script>
 </head>
 
 <body>
@@ -62,24 +69,14 @@
         <section aria-labelledby="delivery-title">
             <h3 id="delivery-title">Delivery Address</h3>
             <form id="frmCheckout">
+                <label for="txtDelivery">Delivery Address</label>
+                <input type="text" id="txtDelivery" name="delivery" required placeholder="Enter delivery address">
 
-                <div>
-                    <label for="txtDelivery">Address</label>
-                    <input type="text" id="txtDelivery" required autocomplete="address-line1">
-                </div>
+                <label for="txtBilling">Billing Address</label>
+                <input type="text" id="txtBilling" name="billing" required placeholder="Enter billing address">
 
-                <h3>Billing Address</h3>
-                <div>
-                    <label for="txtBilling">Address</label>
-                    <input type="text" id="txtBilling" required autocomplete="address-line1">
-                </div>
-
-                <h3>Payment</h3>
-                <div>
-                    <label for="txtCard">Credit Card Number</label>
-                    <input type="text" id="txtCard" required minlength="16" maxlength="19" inputmode="numeric"
-                        autocomplete="cc-number">
-                </div>
+                <label for="txtCard">Card Number</label>
+                <input type="text" id="txtCard" name="card" required placeholder="Enter card number (digits only)">
 
                 <button type="submit">Confirm Order</button>
             </form>
