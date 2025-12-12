@@ -130,26 +130,23 @@ button,
 /* PRIMARY BUTTON → strong CTA */
 .btn-primary {
     background-color: var(--clr-pink);
-    color: var(--clr-cocoa);
+    color: var(--clr-soft-white);
 }
 
 .btn-primary:hover {
-    background-color: var(--clr-pink);
-    color: var(--clr-soft-white);
+    background-color: var(--clr-mint);
+    color: var(--clr-soft-cocoa);
     transform: translateY(-2px);
 }
 
 /* SECONDARY BUTTON → subtle outline button */
 .btn-secondary {
-    background-color: transparent;
-    border: 2px solid var(--clr-cocoa);
+    background-color: var(--clr-oat);
     color: var(--clr-cocoa);
 }
 
 .btn-secondary:hover {
-    background-color: var(--clr-cocoa);
-    color: var(--clr-soft-white);
-    transform: translateY(-2px);
+    background-color: var(--clr-mint);
 }
 
 /* GHOST BUTTON → text-style minimal (good for filters) */
@@ -356,14 +353,15 @@ button,
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--clr-soft-white);
     text-align: center;
+   
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.50);
+    background-color: rgba(61, 47, 47, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -376,34 +374,35 @@ button,
     max-width: 600px;
 }
 
-.hero h1, .hero h2 {
+.hero h2 {
     font-family: var(--font-display);
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: var(--clr-soft-white);
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    color: var(--clr-oat);
 }
 
 /* CTA BUTTON */
 .btn-cta {
-    display: inline-block;
-    background-color: var(--clr-mint);
+   background-color: var(--clr-mint);
     color: var(--clr-cocoa);
-    padding: var(--space-md) var(--space-lg);
     font-weight: 700;
     border-radius: var(--radius);
+    padding: var(--space-md) var(--space-lg);
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .btn-cta:hover {
-    opacity: 0.9;
+   background-color: var(--clr-pink);
+    color: var(--clr-soft-white);
     transform: translateY(-2px);
-    background-color: var(--clr-pink);
-    color: var(--clr-cocoa);
 }
 
 /* FOOTER --------------------------------------------------------- */
@@ -523,24 +522,21 @@ button,
 
 /* PRODUCT CARD */
 .product-card {
-    background-color: var(--clr-soft-white);
+    background-color: var(--clr-oat);
     border-radius: var(--radius);
     padding: var(--space-md);
     text-align: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .product-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
 .product-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    margin-bottom: var(--space-sm);
+     margin-bottom: var(--space-xs);
+    color: var(--clr-cocoa);
 }
 
 .product-card h3 {
@@ -549,10 +545,8 @@ button,
 }
 
 .product-card p.price {
-    color: var(--clr-cocoa);
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 0.3rem 0 var(--space-sm);
+  font-weight: 600;
+  color: var(--clr-cocoa);
 }
 
 /* PRODUCT DETAILS ------------------------------------------------ */
@@ -681,7 +675,7 @@ button,
 /* FOOTER --------------------------------------------------------- */
 footer {
     text-align: center;
-    padding: 2rem;
+    padding: 3rem 2rem;
     background-color: var(--clr-oat);
     font-size: 0.9rem;
     color: var(--clr-cocoa);

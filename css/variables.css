@@ -3,11 +3,11 @@
 /* css/variables.css */
 :root{
   /* Palette */
-  --clr-oat: #E8DFD3;
-  --clr-soft-white: #FAF9F7;
-  --clr-cocoa: #3D2F2F;
-  --clr-pink: #FF8BA7;
-  --clr-mint: #B4F0CA;
+  --clr-oat: #E8DFD3; /*sections, carts*/
+  --clr-soft-white: #FAF9F7; /*primary background, whitespace*/
+  --clr-cocoa: #3D2F2F; /*text, header, footer, contrast*/
+  --clr-pink: #FF8BA7; /*primary cta, badges, interactivity*/
+  --clr-mint: #B4F0CA; /*labels, accent, secondary cta*/
 
   /* Spacing & sizing */
   --space-xs: 6px;
