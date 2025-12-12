@@ -1,3 +1,5 @@
+import { STORAGE_USER_EMAIL, STORAGE_CARTS } from './info.js';
+
 const STORAGE_USERS = 'webshop-users';
 const STORAGE_USER_EMAIL = 'webshop-user-email';
 
