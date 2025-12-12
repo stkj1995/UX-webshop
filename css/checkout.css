@@ -118,4 +118,9 @@ main section h2 {
         box-shadow: 0 0 0 4px rgba(180,240,202,0.3);
     }
 
+    #success-msg {
+        display: none;
+        color: green;
+        margin-top: 1rem;
+    }
 }
