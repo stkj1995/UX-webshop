@@ -1,4 +1,4 @@
-@import 'styles.css'; /* beholder dine variabler */
+@import 'styles.css'; 
 
 /* SIGNUP FORM ------------------------------------------------ */
 #frmSignup {
@@ -24,8 +24,14 @@
 
 #frmSignup header p {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--clr-cocoa);
   text-align: center;
+}
+
+.signup-header .signup-subtext {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
 }
 
 #frmSignup label {
@@ -37,14 +43,14 @@
 #frmSignup input {
   padding: var(--space-sm);
   border-radius: var(--radius);
-  border: 1px solid #ccc;
+  border: 1px solid var(--clr-oat);
   font-size: 1rem;
 }
 
 #frmSignup button {
   margin-top: 1rem;
   background-color: var(--clr-pink);
-  color: white;
+  color: var(--clr-soft-white);
   font-weight: 700;
   padding: var(--space-md);
   border-radius: var(--radius);
