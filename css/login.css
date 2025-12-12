@@ -171,6 +171,16 @@
     opacity: 0.6;
 }
 
+/* FOOTER */
+.icons8-facebook-logo { 
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyBmaWxsPSIjM2QyZjJmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNTAgNTAiIHdpZHRoPSI1MHB4IiBoZWlnaHQ9IjUwcHgiPiAgICA8cGF0aCBkPSJNMjUsM0MxMi44NSwzLDMsMTIuODUsMywyNWMwLDExLjAzLDguMTI1LDIwLjEzNywxOC43MTIsMjEuNzI4VjMwLjgzMWgtNS40NDN2LTUuNzgzaDUuNDQzdi0zLjg0OCBjMC02LjM3MSwzLjEwNC05LjE2OCw4LjM5OS05LjE2OGMyLjUzNiwwLDMuODc3LDAuMTg4LDQuNTEyLDAuMjc0djUuMDQ4aC0zLjYxMmMtMi4yNDgsMC0zLjAzMywyLjEzMS0zLjAzMyw0LjUzM3YzLjE2MWg2LjU4OCBsLTAuODk0LDUuNzgzaC01LjY5NHYxNS45NDRDMzguNzE2LDQ1LjMxOCw0NywzNi4xMzcsNDcsMjVDNDcsMTIuODUsMzcuMTUsMywyNSwzeiIvPjwvc3ZnPg==') 50% 50% no-repeat;
+    background-size: 100%; }
+
+
+    
 /* =========================================
    MOBILE RESPONSIVE
 ========================================= */
