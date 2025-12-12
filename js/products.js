@@ -1,3 +1,5 @@
+import { STORAGE_USER_EMAIL } from './info.js';
+
 document.addEventListener('DOMContentLoaded', async () => {
     const container = document.querySelector('#products-container');
 
@@ -34,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function addToCart(id, products) {
-    const email = localStorage.getItem('userEmail');
+    const email = localStorage.getItem(STORAGE_USER_EMAIL);
     if(!email){
         alert('You must be logged in to add products to cart!');
         return;
@@ -52,4 +54,3 @@ function addToCart(id, products) {
 
     alert(`${product.title} added to your cart!`);
 }
-
