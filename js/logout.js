@@ -2,9 +2,9 @@ import { STORAGE_USER_EMAIL } from './info.js';
 
 const logoutBtn = document.querySelector('#btnLogout') || document.querySelector('#logout');
 
-if(logoutBtn){
+if (logoutBtn) {
   logoutBtn.addEventListener('click', () => {
-    // Remove user email only
+    // Remove logged-in user only
     localStorage.removeItem(STORAGE_USER_EMAIL);
 
     // Cart stays in localStorage

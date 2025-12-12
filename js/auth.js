@@ -1,3 +1,5 @@
+import { STORAGE_USER_EMAIL } from './info.js';
+
 // validation helpers
 export const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
@@ -21,12 +23,12 @@ export async function signup(email, password) {
 }
 
 export async function login(email, password) {
-  // GET users filtered by email (json-server supports ?email=)
   const res = await fetch(`http://localhost:3000/users?email=${encodeURIComponent(email)}`);
   const users = await res.json();
   const user = users.find(u => u.password === password);
   if (!user) throw new Error('Invalid credentials');
-  // store in localStorage
-  localStorage.setItem('LOGGED_IN_USER_EMAIL', email);
+  
+  // store logged-in user email consistently
+  localStorage.setItem(STORAGE_USER_EMAIL, email);
   return user;
 }

@@ -1,8 +1,9 @@
 import { renderFloatingCart } from './floatingCart.js'; 
-import { STORAGE_USER_EMAIL } from './info.js';
+import { STORAGE_USER_EMAIL, STORAGE_CARTS } from './info.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     const container = document.querySelector('#products-container');
+    if (!container) return;
 
     try {
         const res = await fetch('https://fakestoreapi.com/products');
@@ -27,7 +28,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         container.addEventListener('click', (e) => {
             if(e.target.classList.contains('add-to-cart')){
                 const productId = e.target.dataset.id;
-                addToCart(productId, products);
+                const product = products.find(p => p.id == productId);
+                if(product) addToCart(product);
             }
         });
 
@@ -36,18 +38,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-function addToCart(id, products) {
-    const product = products.find(p => p.id == id);
-    if(!product) return;
-
+function addToCart(product) {
     const email = localStorage.getItem(STORAGE_USER_EMAIL);
 
     if (email) {
-        const allCarts = JSON.parse(localStorage.getItem('userCarts') || '{}');
-        const userCart = allCarts[email] || [];
-        userCart.push(product);
-        allCarts[email] = userCart;
-        localStorage.setItem('userCarts', JSON.stringify(allCarts));
+        const allCarts = JSON.parse(localStorage.getItem(STORAGE_CARTS) || '{}');
+        const cart = allCarts[email] || [];
+        cart.push(product);
+        allCarts[email] = cart;
+        localStorage.setItem(STORAGE_CARTS, JSON.stringify(allCarts));
     } else {
         const guestCart = JSON.parse(localStorage.getItem('guestCart') || '[]');
         guestCart.push(product);
@@ -56,6 +55,5 @@ function addToCart(id, products) {
 
     alert(`${product.title} added to cart`);
 
-    // 🔹 Update floating cart immediately
     renderFloatingCart();
 }

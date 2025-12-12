@@ -1,5 +1,5 @@
 import { renderFloatingCart } from './floatingCart.js'; 
-import { STORAGE_USER_EMAIL } from './info.js';
+import { STORAGE_USER_EMAIL, STORAGE_CARTS } from './info.js';
 
 const params = new URLSearchParams(window.location.search);
 const productId = params.get('id');
@@ -42,11 +42,11 @@ function addToCart(product) {
   const email = localStorage.getItem(STORAGE_USER_EMAIL);
 
   if (email) {
-    const allCarts = JSON.parse(localStorage.getItem('userCarts') || '{}');
+    const allCarts = JSON.parse(localStorage.getItem(STORAGE_CARTS) || '{}');
     const cart = allCarts[email] || [];
     cart.push(product);
     allCarts[email] = cart;
-    localStorage.setItem('userCarts', JSON.stringify(allCarts));
+    localStorage.setItem(STORAGE_CARTS, JSON.stringify(allCarts));
   } else {
     const guestCart = JSON.parse(localStorage.getItem('guestCart') || '[]');
     guestCart.push(product);
@@ -55,7 +55,6 @@ function addToCart(product) {
 
   alert(`${product.title} added to cart`);
 
-  // Update floating cart immediately
   renderFloatingCart();
 }
 
