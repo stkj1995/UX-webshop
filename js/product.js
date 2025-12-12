@@ -55,7 +55,7 @@ function addToCart(product) {
 
   alert(`${product.title} added to cart`);
 
-  // 🔹 Update floating cart immediately
+  // Update floating cart immediately
   renderFloatingCart();
 }
 

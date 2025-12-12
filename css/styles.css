@@ -168,6 +168,10 @@ button,
     text-align: center;
 }
 
+.remove-btn {
+  color: var(--clr-soft-white);
+}
+
 /* SITE HEADER ---------------------------------------------------- */
 .site-header {
   position: sticky;
@@ -381,6 +385,8 @@ button,
 .btn-cta:hover {
     opacity: 0.9;
     transform: translateY(-2px);
+    background-color: var(--clr-mint);
+    color: var(--clr-cocoa);
 }
 
 /* FOOTER --------------------------------------------------------- */

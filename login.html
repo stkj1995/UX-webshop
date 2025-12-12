@@ -15,7 +15,6 @@
     <script src="js/login.js" type="module"></script>
     <script src="js/nav.js" type="module"></script>
     <script src="js/cart.js" type="module"></script>
-    <script src="js/product.js" type="module"></script>
 </head>
 
 <body>
@@ -70,28 +69,25 @@
 
     <main>
         <!-- BANNER / HERO SECTION -->
-        <section class="hero">
+        <section class="login-hero">
             <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <h1>Welcome Back!</h1>
-                <p>Log in to access your UX Webshop account and enjoy our exclusive products.</p>
-            </div>
 
-            <header class="login-header">
-                <h2>Log in</h2>
-                <p class="login-subtext">Log in with your email address and password.</p>
-            </header>
+
 
             <form id="frmLogin" class="login-form">
                 <div class="form-group">
+                    <header class="login-header">
+                        <h2>Log in</h2>
+                        <p class="login-subtext">Log in with your email address and password</p>
+                    </header>
                     <label for="txtEmail">E-mail *</label>
                     <input type="email" id="txtEmail" placeholder="your@email.com" required>
                 </div>
 
-                <div class="form-password password-group">
+                <div class="form-group password-group">
                     <label for="txtPassword">Password *</label>
                     <input type="password" id="txtPassword" required>
-                    <span class="toggle-password" id="togglePassword">👁️</span>
+                    <span class="toggle-password" id="togglePassword"></span>
                 </div>
 
                 <div class="remember-group">
