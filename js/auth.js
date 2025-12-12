@@ -1,0 +1,32 @@
+// validation helpers
+export const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+export const isValidPassword = (pw) => {
+  return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,20}$/.test(pw);
+}
+
+// signup handler (simplified)
+export async function signup(email, password) {
+  if (!isValidEmail(email) || !isValidPassword(password)) {
+    throw new Error('Validation failed');
+  }
+  // POST to JSON Server users endpoint
+  const res = await fetch('http://localhost:3000/users', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email, password})
+  });
+  if (!res.ok) throw new Error('Could not create user');
+  return res.json();
+}
+
+export async function login(email, password) {
+  // GET users filtered by email (json-server supports ?email=)
+  const res = await fetch(`http://localhost:3000/users?email=${encodeURIComponent(email)}`);
+  const users = await res.json();
+  const user = users.find(u => u.password === password);
+  if (!user) throw new Error('Invalid credentials');
+  // store in localStorage
+  localStorage.setItem('LOGGED_IN_USER_EMAIL', email);
+  return user;
+}

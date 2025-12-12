@@ -32,11 +32,7 @@ document.querySelector('#frmSignup').addEventListener('submit', async (e) => {
       return;
     }
 
-    const newUser = {
-      id: Date.now().toString(),
-      email,
-      password
-    };
+    const newUser = { email, password };
 
     const createRes = await fetch(`${USERS_BASE_URL}/users`, {
       method: 'POST',
