@@ -220,11 +220,15 @@ button,
 }
 
 /* Logo */
-.logo {
+.logo-link {
+  color: inherit;        /* keep same text color */
+  text-decoration: none; /* remove underline */
   font-family: var(--font-display);
-  font-size: 1.8rem;
-  color: var(--clr-cocoa);
 }
+.logo-link:hover {
+  text-decoration: none; /* no underline on hover */
+}
+
 
 /* Auth links */
 .auth-nav ul {

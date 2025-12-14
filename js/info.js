@@ -1,7 +1,4 @@
 // LocalStorage keys
-// export const STORAGE_USER_EMAIL = 'webshop-user-email';
-// export const STORAGE_CARTS = 'userCarts';
-
 export const STORAGE_USER_EMAIL = 'webshop-user-email';
 export const STORAGE_CARTS = 'webshop-carts';
 

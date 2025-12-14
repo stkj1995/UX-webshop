@@ -1,7 +1,9 @@
 <!-- HEADER -->
 <header class="site-header">
     <div class="header-top">
-        <h1 class="logo">UX Webshop</h1>
+        <h1 class="logo">
+            <a href="index.html" class="logo-link">UX Webshop</a>
+        </h1>
 
         <!-- Burger menu for mobile -->
         <button class="burger" id="burger-btn" aria-label="Toggle menu">
@@ -10,23 +12,47 @@
             <span class="burger-line"></span>
         </button>
 
+        <!-- Main navigation -->
+        <nav class="main-nav" id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+
         <!-- Auth links -->
-        <nav class="auth-nav">
+        <!-- <nav class="auth-nav">
             <ul>
                 <li id="user" class="hidden"><span id="userEmail"></span></li>
                 <li id="signup"><a href="signup.html">Sign up</a></li>
                 <li id="login"><a href="login.html">Log in</a></li>
                 <li id="logout" class="hidden"><button id="btnLogout">Log out</button></li>
             </ul>
-        </nav>
-    </div>
+        </nav> -->
 
-    <!-- Main navigation -->
-    <nav class="main-nav" id="main-nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="cart.html">Cart</a></li>
-        </ul>
-    </nav>
+        <!-- Auth links -->
+        <nav class="auth-nav">
+            <ul>
+                <!-- Logged-in user info -->
+                <li id="user" class="hidden">
+                    <span id="userEmail"></span>
+                </li>
+
+                <!-- Guest links -->
+                <li id="signup">
+                    <a href="signup.html">Sign up</a>
+                </li>
+                <li id="login">
+                    <a href="login.html">Log in</a>
+                </li>
+
+                <!-- Logout button (for logged-in users) -->
+                <li id="logout" class="hidden">
+                    <button id="btnLogout">Log out</button>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
 </header>
