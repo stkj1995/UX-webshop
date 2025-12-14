@@ -9,7 +9,7 @@ export function renderFloatingCart() {
 
     const cart = getCart();
 
-    if (cart.length === 0) {
+    if(cart.length === 0){
         cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
         cartCount.textContent = 0;
         cartTotal.textContent = '0.00';
@@ -36,13 +36,13 @@ export function renderFloatingCart() {
     });
 }
 
-// Listen for cart updates anytime
+// Listen for cart updates
 window.addEventListener('cartUpdated', renderFloatingCart);
 
 // Render on page load
 document.addEventListener('DOMContentLoaded', renderFloatingCart);
 
-// Optional: toggle cart dropdown
+// Toggle dropdown (optional)
 document.addEventListener('DOMContentLoaded', () => {
     const cartBtn = document.getElementById('cart-toggle');
     const cartDropdown = document.getElementById('cart-dropdown');

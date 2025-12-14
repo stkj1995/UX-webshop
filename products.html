@@ -10,29 +10,32 @@
 
     <link rel="stylesheet" href="css/products.css">
 
+    <!-- JS modules -->
     <script src="js/info.js" type="module"></script>
-    <script src="js/products.js" type="module"></script>
+    <script src="js/cartHelpers.js" type="module"></script>
     <script src="js/floatingCart.js" type="module"></script>
-    <script src="js/cart.js" type="module"></script>
+    <script src="js/products.js" type="module"></script>
+    <script src="js/include.js" type="module"></script>
 </head>
 
 <body>
     <!-- FLOATING CART -->
     <div id="floating-cart" class="floating-cart">
         <button id="cart-toggle" class="cart-btn">
-            🛒 <span id="cart-count">0</span>
+            🛒 <span id="floating-cart-count">0</span>
         </button>
 
         <div id="cart-dropdown" class="cart-dropdown hidden">
             <h4>Your Cart</h4>
-            <div id="cart-items" class="cart-items"></div>
+            <div id="floating-cart-items" class="cart-items"></div>
             <div class="cart-footer">
-                <p>Total: $<span id="cart-total">0.00</span></p>
+                <p>Total: $<span id="floating-cart-total">0.00</span></p>
                 <a href="cart.html" class="btn btn-primary btn-block">View Cart</a>
             </div>
         </div>
     </div>
 
+    <!-- HEADER -->
     <div id="header"></div>
 
     <!-- MAIN CONTENT -->
@@ -42,7 +45,7 @@
                 <h2>All Products</h2>
             </header>
 
-            <!-- Breadcrumb / wayfinding -->
+            <!-- Breadcrumb -->
             <nav class="breadcrumb" aria-label="Breadcrumb">
                 <ol>
                     <li><a href="index.html">Home ></a></li>
@@ -52,13 +55,13 @@
 
             <!-- Product list container -->
             <div id="products-container" class="products-grid">
-                <!-- Products will be injected here by products.js -->
+                <!-- Products injected by products.js -->
             </div>
         </section>
     </main>
 
+    <!-- FOOTER -->
     <div id="footer"></div>
-    <script src="js/include.js" type="module"></script>
 </body>
 
 </html>

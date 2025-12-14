@@ -28,9 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (e.target.classList.contains('add-to-cart')) {
                 const id = e.target.dataset.id;
                 const product = products.find(p => p.id == id);
-                if (product) {
-                    addToCart(product); // dispatches cartUpdated
-                }
+                if (product) addToCart(product); // dispatches cartUpdated
             }
         });
 
