@@ -109,7 +109,7 @@
     margin-top: 0.5rem;
     padding: 0.5rem 0.8rem;
     background: var(--clr-cocoa);
-    color: white;
+    color: var(--clr-soft-white);
     border-radius: var(--radius);
     text-decoration: none;
     font-size: 0.9rem;
@@ -119,6 +119,7 @@
 
 .product-card a:hover {
     background: var(--clr-pink);
+    color: var(--clr-cocoa);
 }
 
 /* RESPONSIVE FIXES */

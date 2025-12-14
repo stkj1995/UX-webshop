@@ -42,7 +42,7 @@ body {
 
 .cart-btn:hover {
   transform: translateY(-2px);
-  color: var(--clr-soft-white);
+  color: var(--clr-cocoa);
 }
 
 .cart-dropdown {
@@ -143,7 +143,7 @@ button,
 /* PRIMARY BUTTON → strong CTA */
 .btn-primary {
     background-color: var(--clr-pink);
-    color: var(--clr-soft-white);
+    color: var(--clr-cocoa);
 }
 
 .btn-primary:hover {
@@ -183,7 +183,7 @@ button,
 
 .btn-add:hover {
     background-color: var(--clr-pink);
-    color: var(--clr-soft-white);
+    color: var(--clr-cocoa);
     transform: translateY(-2px);
 }
 
@@ -195,7 +195,7 @@ button,
 }
 
 .remove-btn {
-  color: var(--clr-soft-white);
+  color: var(--clr-cocoa);
 }
 
 /* SITE HEADER ---------------------------------------------------- */
@@ -245,7 +245,7 @@ button,
 
 .auth-nav a:hover, .auth-nav button:hover {
   background-color: var(--clr-pink);
-  color: var(--clr-soft-white);
+  color: var(--clr-cocoa);
   transform: translateY(-2px);
 }
 
@@ -380,9 +380,8 @@ button,
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--clr-soft-white);
-    text-align: center;
-   
+    color: var(--clr-cocoa);
+    text-align: center;  
 }
 
 .hero-overlay {
@@ -428,7 +427,7 @@ button,
 
 .btn-cta:hover {
    background-color: var(--clr-pink);
-    color: var(--clr-soft-white);
+    color: var(--clr-cocoa);
     transform: translateY(-2px);
 }
 
@@ -504,7 +503,6 @@ button,
     display: block;          /* remove inline gap */
 }
 
-
 .footer-bottom {
   text-align: center;
   border-top: 1px solid var(--clr-soft-white);
@@ -528,7 +526,6 @@ button,
     margin-right: 0.5rem;
   }
 }
-
 
 /* PRODUCT GRID --------------------------------------------------- */
 .products-grid {
@@ -685,7 +682,7 @@ button,
     display: inline-block;
     padding: 1rem 1.5rem;
     background-color: var(--clr-pink);
-    color: var(--clr-soft-white);
+    color: var(--clr-cocoa);
     font-weight: 700;
     border-radius: var(--radius);
     text-decoration: none;
