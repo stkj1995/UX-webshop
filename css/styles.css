@@ -253,11 +253,11 @@ button,
   transform: translateY(-2px);
 }
 
-/* BURGER ICON */
+/* Burger icon */
 .burger {
-  display: none; /* hide desktop */
+  display: none; /* hide on desktop */
   width: 24px;
-  height: 18x;
+  height: 18px;
   position: relative;
   background: none;
   border: none;
@@ -268,27 +268,26 @@ button,
   position: absolute;
   width: 100%;
   height: 4px;
- background-color: var(--clr-pink);
   border-radius: 2px;
+  background: linear-gradient(to right, var(--clr-pink), var(--clr-cocoa));
   transition: all 0.3s ease;
-   background: linear-gradient(to right, var(--clr-pink), var(--clr-cocoa));
-}
-
-.burger.open .burger-line {
-  background-color: var(--clr-cocoa);
 }
 
 .burger-line:nth-child(1) { top: 0; }
 .burger-line:nth-child(2) { top: 50%; transform: translateY(-50%); }
 .burger-line:nth-child(3) { bottom: 0; }
 
-.burger.open .burger-line:nth-child(1) {
-  transform: rotate(45deg) translate(4px, 4px);
-}
+/* Animate burger to X */
+.burger.open .burger-line:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
 .burger.open .burger-line:nth-child(2) { opacity: 0; }
-.burger.open .burger-line:nth-child(3) {
-  transform: rotate(-45deg) translate(4px, -4px);
+.burger.open .burger-line:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
+/* Main navigation */
+.main-nav {
+  display: flex;
+  flex-direction: row;
 }
+
 
 /* MAIN NAV ---------------------------------------------------- */
   main {
