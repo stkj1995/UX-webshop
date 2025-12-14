@@ -1,5 +1,4 @@
-import { renderFloatingCart } from './floatingCart.js'; 
-import { STORAGE_USER_EMAIL, STORAGE_CARTS } from './info.js';
+import { addToCart } from './cartHelpers.js';
 
 const params = new URLSearchParams(window.location.search);
 const productId = params.get('id');
@@ -35,27 +34,9 @@ function render(product) {
     </article>
   `;
 
-  document.getElementById('addBtn').addEventListener('click', () => addToCart(product));
-}
-
-function addToCart(product) {
-  const email = localStorage.getItem(STORAGE_USER_EMAIL);
-
-  if (email) {
-    const allCarts = JSON.parse(localStorage.getItem(STORAGE_CARTS) || '{}');
-    const cart = allCarts[email] || [];
-    cart.push(product);
-    allCarts[email] = cart;
-    localStorage.setItem(STORAGE_CARTS, JSON.stringify(allCarts));
-  } else {
-    const guestCart = JSON.parse(localStorage.getItem('guestCart') || '[]');
-    guestCart.push(product);
-    localStorage.setItem('guestCart', JSON.stringify(guestCart));
-  }
-
-  alert(`${product.title} added to cart`);
-
-  renderFloatingCart();
+  document
+    .getElementById('addBtn')
+    .addEventListener('click', () => addToCart(product));
 }
 
 init();

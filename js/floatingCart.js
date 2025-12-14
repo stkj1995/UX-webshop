@@ -1,4 +1,4 @@
-import { STORAGE_USER_EMAIL, STORAGE_CARTS } from './info.js';
+import { getCart, removeFromCart } from './cartHelpers.js';
 
 export function renderFloatingCart() {
     const cartItemsContainer = document.getElementById('floating-cart-items');
@@ -7,17 +7,9 @@ export function renderFloatingCart() {
 
     if (!cartItemsContainer || !cartCount || !cartTotal) return;
 
-    const email = localStorage.getItem(STORAGE_USER_EMAIL);
-    let cart = [];
+    const cart = getCart();
 
-    if(email){
-        const allCarts = JSON.parse(localStorage.getItem(STORAGE_CARTS) || '{}');
-        cart = allCarts[email] || [];
-    } else {
-        cart = JSON.parse(localStorage.getItem('guestCart') || '[]');
-    }
-
-    if(cart.length === 0){
+    if (cart.length === 0) {
         cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
         cartCount.textContent = 0;
         cartTotal.textContent = '0.00';
@@ -36,39 +28,25 @@ export function renderFloatingCart() {
     cartCount.textContent = cart.length;
     cartTotal.textContent = cart.reduce((sum, item) => sum + item.price, 0).toFixed(2);
 
+    // Bind remove buttons
     document.querySelectorAll('.remove-btn').forEach(btn => {
         btn.addEventListener('click', e => {
-            const idx = e.target.dataset.index;
-            removeFromCart(idx);
+            removeFromCart(parseInt(e.target.dataset.index));
         });
     });
 }
 
-function removeFromCart(index){
-    const email = localStorage.getItem(STORAGE_USER_EMAIL);
+// Listen for cart updates anytime
+window.addEventListener('cartUpdated', renderFloatingCart);
 
-    if(email){
-        const allCarts = JSON.parse(localStorage.getItem(STORAGE_CARTS) || '{}');
-        const cart = allCarts[email] || [];
-        cart.splice(index,1);
-        allCarts[email] = cart;
-        localStorage.setItem(STORAGE_CARTS, JSON.stringify(allCarts));
-    } else {
-        const guestCart = JSON.parse(localStorage.getItem('guestCart') || '[]');
-        guestCart.splice(index,1);
-        localStorage.setItem('guestCart', JSON.stringify(guestCart));
-    }
+// Render on page load
+document.addEventListener('DOMContentLoaded', renderFloatingCart);
 
-    renderFloatingCart();
-}
-
+// Optional: toggle cart dropdown
 document.addEventListener('DOMContentLoaded', () => {
     const cartBtn = document.getElementById('cart-toggle');
     const cartDropdown = document.getElementById('cart-dropdown');
     if(cartBtn && cartDropdown){
         cartBtn.addEventListener('click', () => cartDropdown.classList.toggle('hidden'));
     }
-
-    renderFloatingCart();
-    window.addEventListener('storage', renderFloatingCart);
 });

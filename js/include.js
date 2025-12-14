@@ -1,60 +1,35 @@
-// async function loadHTML(id, file) {
-//     const res = await fetch(file);
-//     const html = await res.text();
-//     document.getElementById(id).innerHTML = html;
-// }
-
-// async function init() {
-//     await loadHTML("header", "components/header.html");
-//     await loadHTML("footer", "components/footer.html");
-// }
-
-// init();
-
-
-// async function loadHTML(id, file) {
-//     const res = await fetch(file);
-//     const html = await res.text();
-//     document.getElementById(id).innerHTML = html;
-// }
-
-// async function init() {
-//     await loadHTML("header", "components/header.html");
-//     await loadHTML("footer", "components/footer.html");
-
-   
-//     await import("./nav.js");
-//     await import("./loginCheck.js");
-//     await import("./logout.js");
-// }
-
-// init();
+import { STORAGE_USER_EMAIL } from './info.js';
 
 async function loadHTML(id, file) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
     const res = await fetch(file);
-    const html = await res.text();
-    document.getElementById(id).innerHTML = html;
+    el.innerHTML = await res.text();
 }
 
 async function init() {
     await loadHTML("header", "components/header.html");
     await loadHTML("footer", "components/footer.html");
 
-    // Wait for DOM elements in header to exist
-    const burgerBtn = document.getElementById('burger-btn');
-    const mainNav = document.getElementById('main-nav');
+    // ===== AUTH BUTTONS =====
+    const signupBtn = document.getElementById("signup");
+    const loginBtn = document.getElementById("login");
+    const logoutBtn = document.getElementById("logout");
 
-    if (burgerBtn && mainNav) {
-        burgerBtn.addEventListener('click', () => {
-            mainNav.classList.toggle('active');
-            burgerBtn.classList.toggle('open'); // animated X
-        });
+    if (!signupBtn || !loginBtn || !logoutBtn) return;
+
+    const email = localStorage.getItem(STORAGE_USER_EMAIL);
+
+    if (email) {
+        signupBtn.classList.add("hidden");
+        loginBtn.classList.add("hidden");
+        logoutBtn.classList.remove("hidden");
+    } else {
+        signupBtn.classList.remove("hidden");
+        loginBtn.classList.remove("hidden");
+        logoutBtn.classList.add("hidden");
     }
-
-    // Header-dependent scripts
-    await import("./nav.js");
-    await import("./loginCheck.js");
-    await import("./logout.js");
 }
 
 init();
