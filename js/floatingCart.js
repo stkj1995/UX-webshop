@@ -18,7 +18,7 @@ export function renderFloatingCart() {
 
     cartItemsContainer.innerHTML = cart.map((item, index) => `
         <div class="cart-item">
-            <img src="${item.image}" alt="${item.title}">
+            <img src="${item.image}" alt="${item.title}" loading="lazy" >
             <h5>${item.title}</h5>
             <span class="price">$${item.price.toFixed(2)}</span>
             <button data-index="${index}" class="remove-btn">✖</button>

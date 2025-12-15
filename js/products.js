@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             card.classList.add('product-card');
             card.innerHTML = `
                 <div class="product-img-wrapper">
-                    <img src="${product.image}" alt="${product.title}" />
+                    <img src="${product.image}" alt="${product.title}" loading="lazy" />
                 </div>
                 <h3>${product.title}</h3>
                 <p>$${product.price.toFixed(2)}</p>

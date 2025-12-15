@@ -18,7 +18,7 @@ export function renderCart() {
         total += item.price;
         return `
             <div class="cart-item">
-                <img src="${item.image}" alt="${item.title}">
+                <img src="${item.image}" alt="${item.title}" loading="lazy" >
                 <h4>${item.title}</h4>
                 <p class="price">$${item.price.toFixed(2)}</p>
                 <button data-index="${index}" class="remove-btn">Remove</button>
