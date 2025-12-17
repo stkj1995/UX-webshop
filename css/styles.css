@@ -198,7 +198,7 @@ button,
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
 }
@@ -215,24 +215,47 @@ button,
 }
 /* Auth links */
 .auth-nav ul {
-  display: flex;
-  gap: 0.5rem;
-  list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;   /* remove bullets */
+    padding: 0;         /* remove default padding */
+    margin: 0;          /* remove default margin */
 }
-.auth-nav a, .auth-nav button {
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--clr-cocoa);
-  padding: 0.3rem 0.6rem;
-  border-radius: var(--radius);
-  transition: all 0.2s ease;
-  background-color: rgba(255,255,255,0.3);
+
+.auth-nav li {
+    margin: 0;
 }
-.auth-nav a:hover, .auth-nav button:hover {
-  background-color: var(--clr-pink);
-  color: var(--clr-cocoa);
-  transform: translateY(-2px);
+
+/* Style for both links and buttons */
+.auth-nav a,
+.auth-nav button {
+    font-weight: 600;
+    font-size: 1rem;               /* same size for both */
+    text-decoration: none;
+    color: var(--clr-cocoa);
+    padding: 0.4rem 0.8rem;        /* smaller and consistent padding */
+    border-radius: var(--radius);
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    border: none;                   /* reset button border */
 }
+
+.auth-nav a:hover,
+.auth-nav button:hover {
+    background-color: var(--clr-pink);
+    color: var(--clr-cocoa);
+    transform: translateY(-2px);
+}
+
+#logout {
+  padding: 0.6rem;
+}
+
+
 /* Burger icon – mobile first */
 .burger {
   display: block; /* mobile default */
@@ -243,6 +266,7 @@ button,
   border: none;
   cursor: pointer;
   z-index: 1001; /* above main-nav */
+  margin: 2rem;
 }
 .burger-line {
   position: absolute;
