@@ -33,7 +33,7 @@
     z-index: 3;
 }
 
-.login-header {
+.login-header, h1 {
     text-align: center;
     color: var(--clr-cocoa);
     margin-bottom: 1rem;

@@ -20,6 +20,7 @@ main {
     color: var(--clr-cocoa);
     font-size: 1.8rem;
     margin: 1rem;
+     font-family: var(--font-display);
 }
 
 h1 {
@@ -63,13 +64,6 @@ h1 {
 }
 
 /* MOBILE FIRST */
-
-#single-product header h2 {
-    font-family: var(--font-display);
-    font-size: 2rem;
-    margin-bottom: 0.3rem;
-    color: var(--clr-cocoa);
-}
 
 #single-product .price {
     font-size: 1.6rem;

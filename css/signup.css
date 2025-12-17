@@ -6,14 +6,14 @@
 .signup-hero {
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: 106vh;
     background: linear-gradient(rgba(255, 255, 255, 0.274), #b4f0ca9c),
             url('/images/hero.jpg') center/cover no-repeat !important;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;        /* top align */
     align-items: center;                 /* center horizontally */
-    padding: 5rem 7rem;
+    padding: 5rem 4rem;
 }
 
 .hero-overlay {
@@ -36,7 +36,6 @@
 .signup-header {
     text-align: center;
     color: var(--clr-cocoa);
-    margin-bottom: 1rem;
 }
 
 .signup-header h2 {
@@ -66,14 +65,39 @@
 }
 
 /* =========================================
+   FIELDSET & LEGEND
+========================================= */
+fieldset {
+    border: 1px solid var(--clr-oat);
+    border-radius: 12px;
+    padding: 1rem 1.2rem 1.5rem 1.2rem;
+    background-color: #fafafa; /* subtle contrast for grouping */
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+legend {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--clr-cocoa);
+    padding: 0 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* =========================================
    FORM ELEMENTS
 ========================================= */
-.form-group label,
+/* .form-group label,
 #frmSignup label {
     display: block;
     font-weight: 600;
     margin-bottom: 0.3rem;
     color: var(--clr-cocoa);
+} */
+
+.label {
+    display: none;
 }
 
 .form-group input,
@@ -172,6 +196,10 @@
     #frmSignup {
         padding: 1.5rem;
         max-width: 330px;
+    }
+
+    fieldset {
+        padding: 0.8rem 1rem 1.2rem 1rem;
     }
 
 }

@@ -18,17 +18,17 @@
 </head>
 
 <body>
-    <div id="header"></div>
+    <header id="header"></header>
 
     <!-- MAIN CONTENT -->
     <main>
         <section class="signup-hero">
             <div class="hero-overlay"></div>
 
-            <form id="frmSignup" class="signup-form">
+            <!-- <form id="frmSignup" class="signup-form">
                 <div class="form-group">
                     <header class="signup-header">
-                        <h2>Sign up</h2>
+                        <h1>Sign up</h1>
                         <p class="signup-subtext">Create account to see more</p>
                     </header>
 
@@ -52,14 +52,54 @@
                 <p class="login-info">
                     Have a user already? <a href="login.html">Log in!</a>
                 </p>
+            </form> -->
+            <form id="frmSignup" class="signup-form">
+
+                <!-- Header stays the same -->
+                <header class="signup-header">
+                    <h1>Sign up</h1>
+                    <p class="signup-subtext">Create account to see more</p>
+                </header>
+
+                <!-- FIELDSET: Email -->
+                <fieldset>
+                    <legend>Email</legend>
+                    <div class="form-group">
+                        <label for="txtEmail">Email</label>
+                        <input id="txtEmail" name="txtEmail" type="email" required autocomplete="email">
+                    </div>
+                </fieldset>
+
+                <!-- FIELDSET: Passwords -->
+                <fieldset>
+                    <legend>Password</legend>
+                    <div class="form-group password-group">
+                        <label for="txtPassword">Password</label>
+                        <input id="txtPassword" name="txtPassword" type="password" required autocomplete="new-password">
+                    </div>
+
+                    <div class="repeat-group">
+                        <label for="txtRepeatPassword">Repeat password *</label>
+                        <input id="txtRepeatPassword" name="txtRepeatPassword" type="password" required
+                            autocomplete="new-password">
+                    </div>
+                </fieldset>
+
+                <!-- Submit -->
+                <button type="submit" class="btn-signup">Sign up</button>
+
+                <!-- Login info -->
+                <p class="login-info">
+                    Have a user already? <a href="login.html">Log in!</a>
+                </p>
             </form>
         </section>
     </main>
 
-    <div id="footer"></div>
+    <footer id="footer"></footer>
     <script src="js/include.js" type="module"></script>
 
-    <dialog id="mdlInfo">
+    <dialog id="mdlInfo" role="alertdialog">
         <header>
             <h1></h1>
             <button class="close">&times;</button>
