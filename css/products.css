@@ -48,9 +48,9 @@
     background: var(--clr-soft-white);
     border-radius: var(--radius);
     padding: 1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.06);
     transition: all 0.25s ease;
-    border: 1px solid rgba(0,0,0,0.04);
+    border: 0.0625rem solid rgba(0,0,0,0.04);
 
     display: flex;
     flex-direction: column;
@@ -59,14 +59,14 @@
 }
 
 .product-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1.125rem rgba(0,0,0,0.1);
 }
 
 /* FIX PRODUCT IMAGE CROPPING */
 .product-img-wrapper {
     width: 100%;
-    height: 220px;            /* fast højde for ens kort */
+    height: 13.75rem;            /* fast højde for ens kort */
     background: #f1ebe4;      /* neutral baggrund */
     border-radius: var(--radius);
     display: flex;
@@ -133,12 +133,12 @@
 .add-to-cart:hover {
     background-color: var(--clr-mint);
     color: var(--clr-cocoa);
-    transform: translateY(-2px);
+    transform: translateY(-0.125rem);
 }
 
 /* RESPONSIVE FIXES */
 @media (min-width: 800px) {
     .product-card img {
-        height: 150px;
+        height: 9.375rem;
     }
 }
