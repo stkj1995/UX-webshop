@@ -1,3 +1,42 @@
+// import { addToCart } from './cartHelpers.js';
+
+// document.addEventListener('DOMContentLoaded', async () => {
+//     const container = document.querySelector('#products-container');
+//     if (!container) return;
+
+//     try {
+//         const res = await fetch('https://fakestoreapi.com/products');
+//         const products = await res.json();
+
+//         products.forEach(product => {
+//             const card = document.createElement('div');
+//             card.classList.add('product-card');
+//             card.innerHTML = `
+//                 <div class="product-img-wrapper">
+//                     <img src="${product.image}" alt="${product.title}" loading="lazy" />
+//                 </div>
+//                 <h3>${product.title}</h3>
+//                 <p>$${product.price.toFixed(2)}</p>
+//                 <a href="product.html?id=${product.id}">View Product</a>
+//                 <button data-id="${product.id}" class="add-to-cart">Add to Cart</button>
+//             `;
+//             container.appendChild(card);
+//         });
+
+      
+//         container.addEventListener('click', (e) => {
+//             if (e.target.classList.contains('add-to-cart')) {
+//                 const id = e.target.dataset.id;
+//                 const product = products.find(p => p.id == id);
+//                 if (product) addToCart(product); 
+//             }
+//         });
+
+//     } catch (err) {
+//         console.error(err);
+//     }
+// });
+
 import { addToCart } from './cartHelpers.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -9,6 +48,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         const products = await res.json();
 
         products.forEach(product => {
+            // Create star rating display
+            const fullStars = Math.floor(product.rating.rate);
+            const halfStar = product.rating.rate % 1 >= 0.5 ? 1 : 0;
+            const emptyStars = 5 - fullStars - halfStar;
+
+            let starsHtml = '⭐'.repeat(fullStars);
+            if (halfStar) starsHtml += '✩';
+            starsHtml += '☆'.repeat(emptyStars);
+
             const card = document.createElement('div');
             card.classList.add('product-card');
             card.innerHTML = `
@@ -17,6 +65,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </div>
                 <h3>${product.title}</h3>
                 <p>$${product.price.toFixed(2)}</p>
+                <p class="rating">Rating: ${product.rating.rate.toFixed(1)} ${starsHtml} (${product.rating.count} reviews)</p>
                 <a href="product.html?id=${product.id}">View Product</a>
                 <button data-id="${product.id}" class="add-to-cart">Add to Cart</button>
             `;
@@ -28,7 +77,27 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (e.target.classList.contains('add-to-cart')) {
                 const id = e.target.dataset.id;
                 const product = products.find(p => p.id == id);
-                if (product) addToCart(product); // dispatches cartUpdated
+                if (product) {
+                    // Generate ratingStars again for localStorage
+                    const fullStars = Math.floor(product.rating.rate);
+                    const halfStar = product.rating.rate % 1 >= 0.5 ? 1 : 0;
+                    const emptyStars = 5 - fullStars - halfStar;
+                    let starsHtml = '⭐'.repeat(fullStars);
+                    if (halfStar) starsHtml += '✩';
+                    starsHtml += '☆'.repeat(emptyStars);
+
+                    // Clone product + ratingStars + id for localStorage
+                    const productToStore = { ...product, ratingStars: starsHtml, id: product.id };
+
+                    // Retrieve current cart from localStorage
+                    const userEmail = localStorage.getItem('webshop-user-email');
+                    const currentCart = JSON.parse(localStorage.getItem('webshop-carts')) || {};
+                    if (!currentCart[userEmail]) currentCart[userEmail] = [];
+                    currentCart[userEmail].push(productToStore);
+                    localStorage.setItem('webshop-carts', JSON.stringify(currentCart));
+
+                    addToCart(productToStore); // keep existing floating cart logic
+                }
             }
         });
 
