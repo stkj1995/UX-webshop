@@ -6,7 +6,7 @@
 .signup-hero {
     position: relative;
     width: 100%;
-    height: 106vh;
+    height: 108vh;
     background: linear-gradient(rgba(255, 255, 255, 0.274), #b4f0ca9c),
             url('/images/hero.jpg') center/cover no-repeat !important;
     display: flex;
@@ -71,7 +71,7 @@ fieldset {
     border: 1px solid var(--clr-oat);
     border-radius: 12px;
     padding: 1rem 1.2rem 1.5rem 1.2rem;
-    background-color: #fafafa; /* subtle contrast for grouping */
+    background-color: var(--clr-soft-white); /* subtle contrast for grouping */
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
@@ -88,18 +88,6 @@ legend {
 /* =========================================
    FORM ELEMENTS
 ========================================= */
-/* .form-group label,
-#frmSignup label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 0.3rem;
-    color: var(--clr-cocoa);
-} */
-
-.label {
-    display: none;
-}
-
 .form-group input,
 #frmSignup input {
     width: 100%;
@@ -107,7 +95,7 @@ legend {
     border: 1px solid var(--clr-oat);
     border-radius: 8px;
     font-size: 1rem;
-    background: #f0f0f0;
+    background: #fff;
 }
 
 .form-group input:focus,
@@ -157,7 +145,7 @@ legend {
 }
 
 /* LOGIN LINK BELOW FORM */
-#frmSignup + p, .signup-info {
+#frmSignup + p {
     text-align: center;
     margin-top: 1rem;
     font-size: 0.9rem;
@@ -165,13 +153,22 @@ legend {
     opacity: 0.8;
 }
 
-#frmSignup + p a {
-    color: var(--clr-pink);
-    text-decoration: none;
-    font-weight: 600;
+/* LOGIN INFO (bigger font) */
+.login-info {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem; /* increase from 0.9rem */
+    color: var(--clr-cocoa);
 }
 
-#frmSignup + p a:hover {
+.login-info a {
+    color: var(--clr-pink);
+    font-weight: 600;
+    font-size: 1rem; /* match the paragraph size */
+    text-decoration: none;
+}
+
+.login-info a:hover {
     text-decoration: underline;
 }
 
@@ -182,7 +179,7 @@ legend {
     .signup-hero {
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: 105vh;
     background: linear-gradient(rgba(255, 255, 255, 0.274), #b4f0ca9c),
             url('/images/hero.jpg') center/cover no-repeat !important;
     display: flex;

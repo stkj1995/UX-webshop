@@ -6,7 +6,7 @@
 .login-hero {
     position: relative;
     width: 100%;
-    height: 98vh;
+    height: 112vh;
     background: linear-gradient(rgba(255, 255, 255, 0.274), #b4f0ca9c),
             url('/images/hero.jpg') center/cover no-repeat !important;
     display: flex;
@@ -24,6 +24,26 @@
     z-index: 1;
 }
 
+/* FIELDSET & LEGEND (login) */
+fieldset {
+    border: 1px solid var(--clr-oat);
+    border-radius: 12px;
+    padding: 1rem 1.2rem 1.5rem 1.2rem;
+    background-color: var(--clr-soft-white);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+legend {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--clr-cocoa);
+    padding: 0 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
 /* =========================================
    LOGIN CARD (floating glass box)
 ========================================= */
@@ -36,7 +56,6 @@
 .login-header, h1 {
     text-align: center;
     color: var(--clr-cocoa);
-    margin-bottom: 1rem;
 }
 
 .login-header h2 {
@@ -47,7 +66,7 @@
 .login-header .login-subtext {
     font-size: 0.9rem;
     font-weight: 600;
-    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 /* CARD */
@@ -66,16 +85,10 @@
     gap: 1.2rem;
 }
 
+
 /* =========================================
    FORM ELEMENTS
 ========================================= */
-.form-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 0.3rem;
-    color: var(--clr-cocoa);
-}
-
 .form-group input {
     width: 100%;
     padding: 0.8rem 1rem;
@@ -88,7 +101,7 @@
 .form-group input:focus {
     outline: none;
     border-color: var(--clr-pink);
-    background: var(--clr-soft-white);
+    background: #fff;
     box-shadow: 0 0 0 2px rgba(255, 153, 170, 0.2);
 }
 
@@ -174,7 +187,7 @@
     .login-hero {
         position: relative;
         width: 100%;
-        height: 98vh;
+        height: 114vh;
         background: linear-gradient(rgba(255, 255, 255, 0.274), #b4f0ca9c),
                 url('/images/hero.jpg') center/cover no-repeat !important;
         display: flex;
