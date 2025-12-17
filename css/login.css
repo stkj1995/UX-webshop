@@ -26,8 +26,8 @@
 
 /* FIELDSET & LEGEND (login) */
 fieldset {
-    border: 1px solid var(--clr-oat);
-    border-radius: 12px;
+    border: 0.0625rem solid var(--clr-oat);
+    border-radius: 0.75rem;
     padding: 1rem 1.2rem 1.5rem 1.2rem;
     background-color: var(--clr-soft-white);
     display: flex;
@@ -42,7 +42,6 @@ legend {
     padding: 0 0.5rem;
     margin-bottom: 0.5rem;
 }
-
 
 /* =========================================
    LOGIN CARD (floating glass box)
@@ -71,20 +70,19 @@ legend {
 
 /* CARD */
 .login-form {
-    max-width: 380px;
+    max-width: 23.75rem;
     width: 100%;
     padding: 2rem;
 
     background: var(--clr-soft-white);
 
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 1.25rem rgba(0,0,0,0.15);
 
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
-
 
 /* =========================================
    FORM ELEMENTS
@@ -92,8 +90,8 @@ legend {
 .form-group input {
     width: 100%;
     padding: 0.8rem 1rem;
-    border: 1px solid var(--clr-oat);
-    border-radius: 8px;
+    border: 0.0625rem solid var(--clr-oat);
+    border-radius: 0.5rem;
     font-size: 1rem;
     background: var(--clr-soft-white);
 }
@@ -102,7 +100,7 @@ legend {
     outline: none;
     border-color: var(--clr-pink);
     background: #fff;
-    box-shadow: 0 0 0 2px rgba(255, 153, 170, 0.2);
+    box-shadow: 0 0 0 0.125rem  rgba(255, 153, 170, 0.2);
 }
 
 /* PASSWORD TOGGLE */
@@ -112,7 +110,7 @@ legend {
 
 .toggle-password {
     position: absolute;
-    right: 12px;
+    right:  0.75rem;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -129,7 +127,7 @@ legend {
 .btn-login:hover {
     color: var(--clr-cocoa);
     background-color: var(--clr-mint);
-     transform: translateY(-2px);
+     transform: translateY(-0.125rem);
 }
 
 .btn-login {
@@ -143,7 +141,7 @@ legend {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.15);
   transition: transform 0.2s ease;
 }
 
@@ -175,8 +173,8 @@ legend {
 /* FOOTER */
 .icons8-facebook-logo { 
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
     background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyBmaWxsPSIjM2QyZjJmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNTAgNTAiIHdpZHRoPSI1MHB4IiBoZWlnaHQ9IjUwcHgiPiAgICA8cGF0aCBkPSJNMjUsM0MxMi44NSwzLDMsMTIuODUsMywyNWMwLDExLjAzLDguMTI1LDIwLjEzNywxOC43MTIsMjEuNzI4VjMwLjgzMWgtNS40NDN2LTUuNzgzaDUuNDQzdi0zLjg0OCBjMC02LjM3MSwzLjEwNC05LjE2OCw4LjM5OS05LjE2OGMyLjUzNiwwLDMuODc3LDAuMTg4LDQuNTEyLDAuMjc0djUuMDQ4aC0zLjYxMmMtMi4yNDgsMC0zLjAzMywyLjEzMS0zLjAzMyw0LjUzM3YzLjE2MWg2LjU4OCBsLTAuODk0LDUuNzgzaC01LjY5NHYxNS45NDRDMzguNzE2LDQ1LjMxOCw0NywzNi4xMzcsNDcsMjVDNDcsMTIuODUsMzcuMTUsMywyNSwzeiIvPjwvc3ZnPg==') 50% 50% no-repeat;
     background-size: 100%; }
 
@@ -205,6 +203,6 @@ legend {
 
     .login-form {
         padding: 1.5rem;
-        max-width: 330px;
+        max-width: 20.625rem;
     }
 }
