@@ -87,7 +87,6 @@
     display: block;
 }
 
-
 /* PRODUCT TITLE */
 .product-card h3 {
     font-family: var(--font-display);
@@ -125,6 +124,6 @@
 /* RESPONSIVE FIXES */
 @media (min-width: 800px) {
     .product-card img {
-        height: 240px;
+        height: 150px;
     }
 }

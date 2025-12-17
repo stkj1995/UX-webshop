@@ -72,6 +72,12 @@ h1 {
     margin-top: 0.2rem;
 }
 
+#single-product img {
+   width: 80%;
+    display: contain;
+}
+
+
 /* IMAGE BLOCK (with overlay text trend) */
 .product-image-wrapper {
     position: relative;
