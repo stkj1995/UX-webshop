@@ -187,7 +187,6 @@ legend {
     justify-content: flex-start;        /* top align */
     align-items: center;                 /* center horizontally */
     padding: 5rem 5rem;
-
     }
 
     #frmSignup {
@@ -198,5 +197,4 @@ legend {
     fieldset {
         padding: 0.8rem 1rem 1.2rem 1rem;
     }
-
 }
