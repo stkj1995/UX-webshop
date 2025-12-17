@@ -127,8 +127,8 @@
 }
 
 #frmSignup button:hover {
-  background-color: var(--clr-cocoa);
-  color: var(--clr-soft-white);
+  background-color: var(--clr-mint);
+  color: var(--clr-cocoa);
   transform: translateY(-2px);
 }
 

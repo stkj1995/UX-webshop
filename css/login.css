@@ -113,21 +113,9 @@
     gap: 0.5rem;
 }
 
-/* LOGIN BUTTON */
-/* .btn-login {
-    background: var(--clr-pink);
-    color: var(--clr-cocoa);
-    padding: 0.9rem 1rem;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: 600;
-    transition: 0.2s;
-} */
-
 .btn-login:hover {
-    color: var(--clr-soft-white);
+    color: var(--clr-cocoa);
+    background-color: var(--clr-mint);
      transform: translateY(-2px);
 }
 
