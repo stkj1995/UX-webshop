@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (halfStar) starsHtml += '✩';
             starsHtml += '☆'.repeat(emptyStars);
 
-            const card = document.createElement('article');
+            // ← ORIGINAL WORKING: use div for product-card
+            const card = document.createElement('div');
             card.classList.add('product-card');
             card.innerHTML = `
                 <div class="product-img-wrapper">
@@ -28,38 +29,39 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <p>$${product.price.toFixed(2)}</p>
                 <p class="rating">Rating: ${product.rating.rate.toFixed(1)} ${starsHtml} (${product.rating.count} reviews)</p>
                 <a href="product.html?id=${product.id}">View Product</a>
-                <button data-id="${product.id}" class="add-to-cart">Add to Cart</button>
+                <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
             `;
             container.appendChild(card);
         });
 
-        // Handle Add to Cart clicks
+        // ← ORIGINAL WORKING: Event delegation for dynamic buttons
         container.addEventListener('click', (e) => {
-            if (e.target.classList.contains('add-to-cart')) {
-                const id = e.target.dataset.id;
-                const product = products.find(p => p.id == id);
-                if (product) {
-                    // Generate ratingStars again for localStorage
-                    const fullStars = Math.floor(product.rating.rate);
-                    const halfStar = product.rating.rate % 1 >= 0.5 ? 1 : 0;
-                    const emptyStars = 5 - fullStars - halfStar;
-                    let starsHtml = '⭐'.repeat(fullStars);
-                    if (halfStar) starsHtml += '✩';
-                    starsHtml += '☆'.repeat(emptyStars);
+            const btn = e.target.closest('.add-to-cart');
+            if (!btn) return;
 
-                    // Clone product + ratingStars + id for localStorage
-                    const productToStore = { ...product, ratingStars: starsHtml, id: product.id };
+            const id = btn.dataset.id;
+            const product = products.find(p => p.id == id);
+            if (!product) return;
 
-                    // Retrieve current cart from localStorage
-                    const userEmail = localStorage.getItem('webshop-user-email');
-                    const currentCart = JSON.parse(localStorage.getItem('webshop-carts')) || {};
-                    if (!currentCart[userEmail]) currentCart[userEmail] = [];
-                    currentCart[userEmail].push(productToStore);
-                    localStorage.setItem('webshop-carts', JSON.stringify(currentCart));
+            // Generate rating stars for localStorage
+            const fullStars = Math.floor(product.rating.rate);
+            const halfStar = product.rating.rate % 1 >= 0.5 ? 1 : 0;
+            const emptyStars = 5 - fullStars - halfStar;
+            let starsHtml = '⭐'.repeat(fullStars);
+            if (halfStar) starsHtml += '✩';
+            starsHtml += '☆'.repeat(emptyStars);
 
-                    addToCart(productToStore); // keep existing floating cart logic
-                }
-            }
+            const productToStore = { ...product, ratingStars: starsHtml, id: product.id };
+
+            // Save in localStorage by user
+            const userEmail = localStorage.getItem('webshop-user-email');
+            const currentCart = JSON.parse(localStorage.getItem('webshop-carts')) || {};
+            if (!currentCart[userEmail]) currentCart[userEmail] = [];
+            currentCart[userEmail].push(productToStore);
+            localStorage.setItem('webshop-carts', JSON.stringify(currentCart));
+
+            // Update floating cart UI
+            addToCart(productToStore);
         });
 
     } catch (err) {

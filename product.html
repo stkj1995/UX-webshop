@@ -17,27 +17,29 @@
 
 <body>
     <!-- FLOATING CART -->
-     <div id="floating-cart" class="floating-cart" aria-label="Toggle shopping cart">
-        <button id="cart-toggle" class="cart-btn" aria-haspopup="dialog">
-            🛒 <span id="cart-count">0</span>
+    <div id="floating-cart" class="floating-cart">
+        <button id="cart-toggle" class="cart-btn">
+            🛒 <span id="floating-cart-count">0</span>
         </button>
 
         <div id="cart-dropdown" class="cart-dropdown hidden">
-            <p class="floating-cart-title">Your Cart</p>
-            <div id="cart-items" class="cart-items"></div>
+            <h4>Your Cart</h4>
+            <div id="floating-cart-items" class="cart-items"></div>
             <div class="cart-footer">
-                <p>Total: $<span id="cart-total">0.00</span></p>
+                <p>Total: $<span id="floating-cart-total">0.00</span></p>
                 <a href="cart.html" class="btn btn-primary btn-block">View Cart</a>
             </div>
         </div>
     </div>
 
-    <header id="header"></header>
+    <div id="header"></div>
 
     <!-- MAIN CONTENT -->
     <main id="main">
         <section class="products-section">
-            <h1 class="heading-products">Product Details</h1>
+            <header>
+                <h2>All Products</h2>
+            </header>
 
             <!-- Breadcrumb / wayfinding -->
             <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -53,7 +55,7 @@
         </section>
     </main>
 
-    <footer id="footer"></footer>
+    <div id="footer"></div>
     <script src="js/include.js" type="module"></script>
 </body>
 

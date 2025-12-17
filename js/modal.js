@@ -7,7 +7,7 @@ export const showModal = (header, text) => {
 
     modal.showModal();
 
-    // STEP 5 — move focus to close button (ACCESSIBILITY)
+    // ✅ STEP 5 — move focus to close button (ACCESSIBILITY)
     modal.querySelector('.close')?.focus();
 };
 
