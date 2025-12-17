@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (halfStar) starsHtml += '✩';
             starsHtml += '☆'.repeat(emptyStars);
 
-            const card = document.createElement('div');
+            const card = document.createElement('article');
             card.classList.add('product-card');
             card.innerHTML = `
                 <div class="product-img-wrapper">
