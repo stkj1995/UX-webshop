@@ -9,29 +9,52 @@ document.addEventListener('DOMContentLoaded', async () => {
         const products = await res.json();
 
         products.forEach(product => {
-            // Create star rating display
-            const fullStars = Math.floor(product.rating.rate);
-            const halfStar = product.rating.rate % 1 >= 0.5 ? 1 : 0;
-            const emptyStars = 5 - fullStars - halfStar;
+        // Create star rating display
+        const fullStars = Math.floor(product.rating.rate);
+        const halfStar = product.rating.rate % 1 >= 0.5 ? 1 : 0;
+        const emptyStars = 5 - fullStars - halfStar;
 
-            let starsHtml = '⭐'.repeat(fullStars);
-            if (halfStar) starsHtml += '✩';
-            starsHtml += '☆'.repeat(emptyStars);
+        let starsHtml = '⭐'.repeat(fullStars);
+        if (halfStar) starsHtml += '✩';
+        starsHtml += '☆'.repeat(emptyStars);
 
-            // ← ORIGINAL WORKING: use div for product-card
-            const card = document.createElement('div');
-            card.classList.add('product-card');
-            card.innerHTML = `
-                <div class="product-img-wrapper">
-                    <img src="${product.image}" alt="${product.title}" loading="lazy" />
-                </div>
-                <h3>${product.title}</h3>
-                <p>$${product.price.toFixed(2)}</p>
-                <p class="rating">Rating: ${product.rating.rate.toFixed(1)} ${starsHtml} (${product.rating.count} reviews)</p>
-                <a href="product.html?id=${product.id}">View Product</a>
-                <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
-            `;
-            container.appendChild(card);
+        // Create product card
+        const card = document.createElement('div');
+        card.classList.add('product-card');
+
+        // Product content
+        card.innerHTML = `
+            <div class="product-img-wrapper">
+                <img src="${product.image}" alt="${product.title}" loading="lazy" />
+            </div>
+            <h3>${product.title}</h3>
+            <p>$${product.price.toFixed(2)}</p>
+            <p class="rating">Rating: ${product.rating.rate.toFixed(1)} ${starsHtml} (${product.rating.count} reviews)</p>
+        `;
+
+        // Create button group container
+        const buttonGroup = document.createElement('div');
+        buttonGroup.classList.add('button-group');
+
+        // Create buttons
+        const viewBtn = document.createElement('a');
+        viewBtn.href = `product.html?id=${product.id}`;
+        viewBtn.textContent = 'View Product';
+
+        const addBtn = document.createElement('button');
+        addBtn.classList.add('add-to-cart');
+        addBtn.dataset.id = product.id;
+        addBtn.textContent = 'Add to Cart';
+
+        // Append buttons to the button group
+        buttonGroup.appendChild(viewBtn);
+        buttonGroup.appendChild(addBtn);
+
+        // Append button group to card
+        card.appendChild(buttonGroup);
+
+        // Append card to container
+        container.appendChild(card);
         });
 
         // ← ORIGINAL WORKING: Event delegation for dynamic buttons

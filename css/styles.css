@@ -133,21 +133,9 @@ button,
     cursor: pointer;
     text-decoration: none;
     transition: all 0.25s ease;
-    outline-offset: 3px; /* accessibility */
+    outline-offset: 3px; 
 }
-.add-to-cart {
-  background-color: var(--clr-oat);
-  color: var(--clr-cocoa);
-  border: none;
-  border-radius: var(--radius);
-  margin: 0.8rem 1rem;
-  cursor: pointer;
-}
-.add-to-cart:hover {
-    background-color: var(--clr-mint);
-    color: var(--clr-cocoa);
-    transform: translateY(-2px);
-}
+
 /* PRIMARY BUTTON → strong CTA */
 .btn-primary {
     background-color: var(--clr-pink);
