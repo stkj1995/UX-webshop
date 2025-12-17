@@ -196,6 +196,8 @@ button,
   color: inherit;        /* keep same text color */
   text-decoration: none; /* remove underline */
   font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 .logo-link:hover {
   text-decoration: none; /* no underline on hover */
