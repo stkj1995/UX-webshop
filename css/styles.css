@@ -457,11 +457,16 @@ main h2 {
 }
 .footer-social .social-icons a {
     display: inline-flex;
-    text-decoration: none;   /* remove underline */
+    text-decoration: none; 
+    width: 42px;         /* smaller size */
+    height: 42px;        /* keep aspect ratio */
+    object-fit: contain; /* ensures image fits without distortion */
+    margin-right: 0.5rem; 
 }
 .footer-social .social-icons img {
     display: block;          /* remove inline gap */
 }
+
 .footer-bottom {
   text-align: center;
   border-top: 1px solid var(--clr-soft-white);
