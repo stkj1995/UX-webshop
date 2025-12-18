@@ -93,7 +93,7 @@ legend {
     border: 0.0625rem solid var(--clr-oat);
     border-radius: 0.5rem;
     font-size: 1rem;
-    background: var(--clr-soft-white);
+    background: #fff;
 }
 
 .form-group input:focus {
