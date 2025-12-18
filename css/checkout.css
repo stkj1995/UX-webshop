@@ -66,8 +66,8 @@ main section h2 {
 }
 
 #frmCheckout button[type="submit"] {
-  margin-top: 1rem;
-    padding: 1rem 1.5rem;
+  margin-top: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
     background-color: var(--clr-pink);
     color: var(--clr-cocoa);
     font-weight: 700;
@@ -91,7 +91,7 @@ main section h2 {
 @media (max-width: 768px) {
     main {
         margin: 3rem auto;
-        padding: 0 1rem;
+        padding: 0 var(--space-md);
     }
 
      main h2 {
@@ -100,7 +100,7 @@ main section h2 {
     
     #frmCheckout input {
         font-size: 0.95rem;
-        padding: 0.8rem 1rem;
+        padding: 0.8rem var(--space-md);
     }
 
     #frmCheckout button[type="submit"] {

@@ -40,13 +40,13 @@
 
 .signup-header h2 {
     font-size: 2rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: var(--space-xs);
 }
 
 .signup-header .signup-subtext {
     font-size: 0.9rem;
     font-weight: 600;
-    padding-bottom: 1rem;
+    padding-bottom: var(--space-md);
 }
 
 /* CARD */
@@ -70,7 +70,7 @@
 fieldset {
     border: 0.0625rem solid var(--clr-oat);
     border-radius: 0.75rem;
-    padding: 1rem 1.2rem 1.5rem 1.2rem;
+    padding: var(--space-md) 1.2rem var(--space-lg) 1.2rem;
     background-color: var(--clr-soft-white); /* subtle contrast for grouping */
     display: flex;
     flex-direction: column;
@@ -91,7 +91,7 @@ legend {
 .form-group input,
 #frmSignup input {
     width: 100%;
-    padding: 0.8rem 1rem;
+    padding: 0.8rem var(--space-md);
     border: 0.0625rem solid var(--clr-oat);
     border-radius: 0.5rem;
     font-size: 1rem;
@@ -126,7 +126,7 @@ legend {
   color: var(--clr-cocoa);
   border: none;
   border-radius: var(--radius);
-  padding: 0.8rem 1rem;
+  padding: 0.8rem var(--space-md);
   cursor: pointer;
   font-size: 1.2rem;
   display: flex;
@@ -147,7 +147,7 @@ legend {
 /* LOGIN LINK BELOW FORM */
 #frmSignup + p {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: var(--space-md);
     font-size: 0.9rem;
     color: var(--clr-cocoa);
     opacity: 0.8;
@@ -156,15 +156,15 @@ legend {
 /* LOGIN INFO (bigger font) */
 .login-info {
     text-align: center;
-    margin-top: 1rem;
-    font-size: 1rem; /* increase from 0.9rem */
+    margin-top: var(--space-md);
+    font-size: var(--space-md); /* increase from 0.9rem */
     color: var(--clr-cocoa);
 }
 
 .login-info a {
     color: var(--clr-pink);
     font-weight: 600;
-    font-size: 1rem; /* match the paragraph size */
+    font-size: var(--space-md); /* match the paragraph size */
     text-decoration: none;
 }
 
@@ -190,11 +190,11 @@ legend {
     }
 
     #frmSignup {
-        padding: 1.5rem;
+        padding: var(--space-lg);
         max-width: 20.625rem;
     }
 
     fieldset {
-        padding: 0.8rem 1rem 1.2rem 1rem;
+        padding: 0.8rem var(--space-md) 1.2rem var(--space-md);
     }
 }
