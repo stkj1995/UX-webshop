@@ -33,6 +33,7 @@ main section h2 {
 /* FORM STYLING */
 #delivery-title {
     color: var(--clr-cocoa);
+    padding-bottom: var(--space-md);
 }
 
 #frmCheckout {
